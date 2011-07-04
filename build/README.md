@@ -7,4 +7,5 @@ Run genDoc.bat _**&lt;jsdoc-location&gt;**_
 
 ## Mac
 Run genDoc _**&lt;jsdoc-location&gt;**_
+
 Note- For MAC genDoc only accepts absolute path for jsdoc-location. Paths including "~" will not work.
