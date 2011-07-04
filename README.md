@@ -7,7 +7,7 @@ This project is Open Sourced under the Apache 2.0 license
 [Read more](https://github.com/blackberry/WebWorks/wiki) about the BlackBerry WebWorks open source project
 
 ## Automated Build
-*Build scripts for windows and Mac are located at [build/genDoc.bat](https://github.com/nukulb/WebWorks-API-Docs/tree/master/build) and [build/genDoc](https://github.com/nukulb/WebWorks-API-Docs/tree/master/build).*
+*Build scripts for windows and Mac are located at [build/genDoc.bat](https://github.com/blackberry/WebWorks-API-Docs/tree/master/build) and [build/genDoc](https://github.com/blackberry/WebWorks-API-Docs/tree/master/build).*
 
 ## Manual Build
 ### Setting up your Environment
