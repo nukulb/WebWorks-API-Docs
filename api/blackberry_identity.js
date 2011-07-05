@@ -19,7 +19,6 @@
 * @BB50+
 * @namespace The Identity object contains information regarding the user&apos;s identity and accounts on a BlackBerry smartphone.
 * @featureID blackberry.identity
-* @featureID blackberry.identity.phone
 * @permission read_device_identifying_information Permits your app to access device identifiers.
 * @example
 * &lt;script type=&quot;text&sol;javascript&quot;&gt;
@@ -34,6 +33,74 @@
 * &lt;&sol;script&gt;
 */
 blackberry.identity = {
+
+/**
+ * Returns a JSON object containing the PIN of the device.
+ * @uri 
+ * @BB50+
+ * @returns {JSON of all the properties}
+ * {
+ *   data : {
+ *       "getServiceList" : [ {
+ *           "name" : "Email",
+ *           "type" : 0,
+ *           "emailAddress" : "simulation@this.machine",
+ *           "TYPE_EMAIL" : 0,
+ *           "TYPE_CALENDAR" : 1,
+ *           "TYPE_CONTACT" : 2
+ *       }, {
+ *           "name" : "Sync Service book",
+ *           "type" : 2,
+ *           "emailAddress" : null,
+ *           "TYPE_EMAIL" : 0,
+ *           "TYPE_CALENDAR" : 1,
+ *           "TYPE_CONTACT" : 2
+ *       } ],
+ *       "getTransportList" : [ {
+ *           "name" : null,
+ *           "type" : "TCP Cellular"
+ *       }, {
+ *           "name" : "Internet",
+ *           "type" : "MDS"
+ *       } ],
+ *       "PIN" : "21000000a",
+ *       "IMSI" : "666666.55.364813.8",
+ *       "IMEI" : "123456.78.364813.8"
+ *   }
+ * }
+ * @example 
+ * &lt;html&gt;
+ * &lt;head&gt;
+ *     &lt;script type="text/javascript" src="js/jquery-1.4.2.js" &gt;&lt;/script&gt;
+ *     &lt;script type="text/javascript" src="js/jquery.form.js" &gt;&lt;/script&gt;
+ *     &lt;script type="text/javascript" src="js/jquery.populate.js" &gt;&lt;/script&gt;
+ *     
+ *     &lt;script type="text/javascript"&gt;  
+ *	function getIdentityData(){
+ *		$.ajax({
+ *		    type: "get",
+ *		    url: "webworks://blackberry/identity/get",
+ *		    success: function(msg){
+ *		      $('#myIdentityDiv').populate(JSON.parse(msg).data.PIN);
+ *		    }
+ *		});
+ *	}
+ *      &lt;/script&gt;
+ *      
+ *&lt;/head&gt;
+ *&lt;body&gt;
+ *
+ *    &lt;input type="button" onclick="getIdentityData();" value="Populate - IDENTITY"/&gt;
+ *    &lt;div id="myIdentityDiv"&gt;
+ *        PIN: &lt;span id="PIN"&gt;&lt;/span&gt;&lt;br/&gt;
+ *    &lt;/div&gt;
+ *    
+ *&lt;/body&gt;
+ *&lt;/html&gt;
+ */
+get: function(){}
+
+};
 
 /**
  * Returns a JSON object containing the PIN of the device.
