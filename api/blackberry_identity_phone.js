@@ -31,7 +31,51 @@
 *   }
 * &lt;&sol;script&gt;
 */
-blackberry.identity.phone = { };
+blackberry.identity.phone = { 
+    /**
+     * @name blackberry.identity.phone.get
+     * @function
+     * @uri
+     * @description 
+     * @BB50+
+     * @returns {JSON of all the properties}
+     * {
+     *     data : {
+     *         "getLineIds" : [ 1 ],            // all the lines registered with the device.
+     *         "getLineLabel" : "Line 1",       // line description of default line
+     *         "getLineNumber" : "15198887465", // line number of default line
+     *         "getLineType" : 1                // 1 - mobile, 2 - PBX
+     *     }
+     * }
+     * @example
+     * &lt;html&gt;
+     * &lt;head&gt;
+     *   &lt;script type="text/javascript" src="js/jquery-1.4.2.js" &gt;&lt;/script&gt;
+     *   &lt;script type="text/javascript" src="js/jquery.form.js" &gt;&lt;/script&gt;
+     *   &lt;script type="text/javascript" src="js/jquery.populate.js" &gt;&lt;/script&gt;
+     *   &lt;script type="text/javascript"&gt;  
+     *     function getIdentityPhoneData(){
+     *       $.ajax({
+     *         type: "get",
+     *         url: "webworks://blackberry/identity/phone/get",
+     *         success: function(msg){
+     *             $('#myPhoneDiv').populate(JSON.parse(msg).data.getLineNumber);
+     *         }
+     *       });
+     *     }
+     *   &lt;/script&gt;
+     * &lt;/head&gt;
+     * &lt;body&gt;
+     * &lt;input type="button" onclick="getIdentityPhoneData();" value="Populate - IDENTIY.PHONE"/&gt;
+     * &lt;div id="myPhoneDiv"&gt;
+     *     Phone Number: &lt;span id="getLineNumber"&gt;&lt;/span&gt;&lt;br/&gt;
+     * &lt;/div&gt;
+     * &lt;/body&gt;
+     * &lt;/html&gt;
+     */
+    get: function(){}
+
+};
 
 /**
 * Returns the id of all the lines registered with the device. 
@@ -63,5 +107,3 @@ blackberry.identity.phone.getLineNumber = function(lineId) { };
 * @BB50+
 */
 blackberry.identity.phone.getLineType = function(lineId) { };
-
-
