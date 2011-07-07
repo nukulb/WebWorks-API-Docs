@@ -42,9 +42,9 @@ blackberry.identity.phone = {
      * {
      *     data : {
      *         "getLineIds" : [ 1 ],            // all the lines registered with the device.
-     *         "getLineLabel" : "Line 1",       // line description of default line
-     *         "getLineNumber" : "15198887465", // line number of default line
-     *         "getLineType" : 1                // 1 - mobile, 2 - PBX
+     *         "getLineLabel" : "Line 1",       // description of default line
+     *         "getLineNumber" : "15198887465", // number of default line
+     *         "getLineType" : 1                // type of the default line specified: 1 - mobile, 2 - PBX
      *     }
      * }
      * @example
