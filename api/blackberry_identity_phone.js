@@ -57,9 +57,9 @@ blackberry.identity.phone = {
      *     function getIdentityPhoneData(){
      *       $.ajax({
      *         type: "get",
-     *         url: "webworks://blackberry/identity/phone/get",
+     *         url: "http://webworks/blackberry/identity/phone/get",
      *         success: function(msg){
-     *             $('#myPhoneDiv').populate(JSON.parse(msg).data.getLineNumber);
+     *             $('#myPhoneDiv').populate(JSON.parse(msg).data);
      *         }
      *       });
      *     }

@@ -125,7 +125,7 @@ blackberry.identity = {
      *		    type: "get",
      *		    url: "webworks://blackberry/identity/get",
      *		    success: function(msg){
-     *		      $('#myIdentityDiv').populate(JSON.parse(msg).data);
+     *		      $('#myIdentityDiv').populate(JSON.parse(msg));
      *		    }
      *		});
      *	}
@@ -137,6 +137,8 @@ blackberry.identity = {
      *    &lt;input type="button" onclick="getIdentityData();" value="Populate - IDENTITY"/&gt;
      *    &lt;div id="myIdentityDiv"&gt;
      *        PIN: &lt;span id="PIN"&gt;&lt;/span&gt;&lt;br/&gt;
+     *        IMSI: &lt;span id="IMSI"&gt;&lt;/span&gt;&lt;br/&gt;
+     *        IMEI: &lt;span id="IMEI"&gt;&lt;/span&gt;&lt;br/&gt;
      *    &lt;/div&gt;
      *    
      *&lt;/body&gt;
