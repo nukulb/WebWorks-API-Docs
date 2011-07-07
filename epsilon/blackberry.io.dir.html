@@ -1,0 +1,1188 @@
+<!--
+* Copyright 2010-2011 Research In Motion Limited.
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+-->
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- ============================== header ================================= -->	
+<html> 
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+		
+			<title>Directory</title>
+		
+		
+		<style type="text/css">
+			.apiColumn {
+				width: 200px;
+			}
+			
+			.apiTable {
+				margin: 5px;
+				border-collapse: collapse;
+			}
+			
+			.apiYes {
+				background-color: #95B9C7;
+				color:#FAF8CC;
+				text-align:center;
+			}
+			
+			.apiNo {
+				background-color: #FAF8CC;
+				text-align:center;
+			}
+			
+			.apiTh {
+				border-width: 1px;
+				border-style: solid;
+				border-color: #ccc;
+				padding: 5px;
+				background-color: #f0f0f0;
+				text-align: left;
+				vertical-align: top;
+			}
+			
+			.apiTd {
+				border-width: 1px;
+				border-style: solid;
+				border-color: #ccc;
+				padding: 5px;
+				vertical-align: top;
+			}
+			
+			.apiProperty {
+				padding-left: 20px;
+			}
+			
+			table.betaTable {
+				border-width: 1px;
+				border-style: solid;
+				border-color: #ccc;
+				padding: 5px;
+				vertical-align: top;
+				margin: 5px;
+				margin-bottom:15px;
+				width : 90%;
+				background-color: #FCD8B9;
+			}
+			
+			td.betaTd {
+				color: #484848;
+				vertical-align: top;
+				background-color: #FCD8B9;
+			}
+			
+			table.learnTable {
+				border-width: 1px;
+				border-style: solid;
+				border-color: #ccc;
+				padding: 5px;
+				vertical-align: top;
+				margin: 5px;
+				margin-bottom:15px;
+				width : 90%;
+				background-color: #FAF8CC;
+			}
+			
+			td.learnTd {
+				color: #484848;
+				vertical-align: top;
+				background-color: #FAF8CC;
+			}
+
+		</style>
+	  
+		<link rel="stylesheet" href="common.css" type="text/css">
+		<script src="server.js"></script>
+	</head>
+	
+
+<!-- ============================== description ============================ -->
+	<p>
+		
+			The Directory object provides functions for interacting with directories on the file system.
+		
+	</p>
+	
+<!-- ============================== notice ============================ -->
+    
+
+    
+<!-- ============================== Beta Tag ============================ -->
+	
+
+
+<!-- ============================== Learning Resources ============================ -->
+	
+	
+<!-- ============================== Support Platforms ============================ -->
+	
+	
+		
+		
+		
+		
+	
+	
+	
+    
+    
+	
+		<div class="title">Supported Platform(s)</div>		
+		<table class="scriptTable">			
+			<tr> 
+				<td class="scriptTd">
+					
+						- BlackBerry OS 5.0+<br/>
+					
+				</td> 
+			</tr>
+			<tr>
+		 		<td>
+		 			<div>- Supported Platform Table: <span id="codeExpand" onclick="codeClick(this)";>Expand</span></div>
+		 			<div id="codeExamples">
+		 				<table class="apiTable">
+		 					<tr>
+								<th class="apiTh apiColumn">
+								   API
+								   
+								</th>
+								<th class="apiTh" >
+								   OS 5.0
+								   
+								</th>
+								<th class="apiTh" >
+								   OS 6.0
+								   
+								</th>
+								<th class="apiTh" >
+								   PlayBook
+								   
+								</th>
+							</tr>
+							
+							
+    							<tr x-ww-support="bb5.0|bb6.0">
+    								<td class="apiTd">
+    								<a href="blackberry.io.dir.html#.createNewDir">blackberry.io.dir.createNewDir</a>								
+    								<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+    							</tr>								
+							
+    							<tr x-ww-support="bb5.0|bb6.0">
+    								<td class="apiTd">
+    								<a href="blackberry.io.dir.html#.deleteDirectory">blackberry.io.dir.deleteDirectory</a>								
+    								<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+    							</tr>								
+							
+    							<tr x-ww-support="bb5.0|bb6.0">
+    								<td class="apiTd">
+    								<a href="blackberry.io.dir.html#.exists">blackberry.io.dir.exists</a>								
+    								<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+    							</tr>								
+							
+    							<tr x-ww-support="bb5.0|bb6.0">
+    								<td class="apiTd">
+    								<a href="blackberry.io.dir.html#.getFreeSpaceForRoot">blackberry.io.dir.getFreeSpaceForRoot</a>								
+    								<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+    							</tr>								
+							
+    							<tr x-ww-support="bb5.0|bb6.0">
+    								<td class="apiTd">
+    								<a href="blackberry.io.dir.html#.getParentDirectory">blackberry.io.dir.getParentDirectory</a>								
+    								<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+    							</tr>								
+							
+    							<tr x-ww-support="bb5.0|bb6.0">
+    								<td class="apiTd">
+    								<a href="blackberry.io.dir.html#.getRootDirs">blackberry.io.dir.getRootDirs</a>								
+    								<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+    							</tr>								
+							
+    							<tr x-ww-support="bb5.0|bb6.0">
+    								<td class="apiTd">
+    								<a href="blackberry.io.dir.html#.listDirectories">blackberry.io.dir.listDirectories</a>								
+    								<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+    							</tr>								
+							
+    							<tr x-ww-support="bb5.0|bb6.0">
+    								<td class="apiTd">
+    								<a href="blackberry.io.dir.html#.listFiles">blackberry.io.dir.listFiles</a>								
+    								<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+    							</tr>								
+							
+    							<tr x-ww-support="bb5.0|bb6.0">
+    								<td class="apiTd">
+    								<a href="blackberry.io.dir.html#.rename">blackberry.io.dir.rename</a>								
+    								<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+    							</tr>								
+							
+						</table>
+					</div>
+				</td>
+			</tr>			
+		</table>
+	
+	
+<!-- ============================== Permissions ============================ -->	
+	
+		<div class="title">Permissions</div>
+		To use <u>all</u> of the API described for this object, you must declare the below feature element(s) in your configuration document:
+		<br>
+		<table class="scriptTable">
+			
+				<tr> 
+					<td class="scriptTd"> 
+						&lt;feature id="blackberry.io.dir" /&gt;
+						<br>
+					</td> 
+				</tr>
+			
+		</table>
+	
+
+<!-- ============================== Constructor Summary ========================= -->
+	
+
+<!-- ============================== Deprecation setup  ==================== -->
+    
+    
+<!-- ============================== Function Summary  ==================== -->    
+     
+    
+        
+        <br/>
+        <div x-ww-support="bb5.0|bb6.0">
+            <h1>Functions</h1>
+    
+    
+   			
+    		<ul class="ulNoTopMargin">			
+    			
+    				<li x-ww-support="bb5.0|bb6.0">
+    				    <a href="blackberry.io.dir.html#.createNewDir">blackberry.io.dir.createNewDir</a>
+    					
+    				</li>				
+    			
+    				<li x-ww-support="bb5.0|bb6.0">
+    				    <a href="blackberry.io.dir.html#.deleteDirectory">blackberry.io.dir.deleteDirectory</a>
+    					
+    				</li>				
+    			
+    				<li x-ww-support="bb5.0|bb6.0">
+    				    <a href="blackberry.io.dir.html#.exists">blackberry.io.dir.exists</a>
+    					
+    				</li>				
+    			
+    				<li x-ww-support="bb5.0|bb6.0">
+    				    <a href="blackberry.io.dir.html#.getFreeSpaceForRoot">blackberry.io.dir.getFreeSpaceForRoot</a>
+    					
+    				</li>				
+    			
+    				<li x-ww-support="bb5.0|bb6.0">
+    				    <a href="blackberry.io.dir.html#.getParentDirectory">blackberry.io.dir.getParentDirectory</a>
+    					
+    				</li>				
+    			
+    				<li x-ww-support="bb5.0|bb6.0">
+    				    <a href="blackberry.io.dir.html#.getRootDirs">blackberry.io.dir.getRootDirs</a>
+    					
+    				</li>				
+    			
+    				<li x-ww-support="bb5.0|bb6.0">
+    				    <a href="blackberry.io.dir.html#.listDirectories">blackberry.io.dir.listDirectories</a>
+    					
+    				</li>				
+    			
+    				<li x-ww-support="bb5.0|bb6.0">
+    				    <a href="blackberry.io.dir.html#.listFiles">blackberry.io.dir.listFiles</a>
+    					
+    				</li>				
+    			
+    				<li x-ww-support="bb5.0|bb6.0">
+    				    <a href="blackberry.io.dir.html#.rename">blackberry.io.dir.rename</a>
+    					
+    				</li>				
+    			
+    		</ul>	
+   
+
+<!-- ============================== Inherited Functions Summary  ==================== -->	
+    
+	
+    
+        </div>
+        		
+	
+<!-- ============================== events summary ======================== -->
+    
+    
+    
+    
+	
+	
+<!-- ============================== Inherited Event Summary  ==================== -->	
+    
+	
+	
+<!-- ============================== Properties summary ===================== -->
+    
+    
+    
+	
+	
+<!-- ============================== Inherited Properties Summary  ==================== -->	
+    
+	
+		
+<!-- ============================== Constants summary ===================== -->
+    
+	
+	
+	
+	
+
+<!-- ============================== Inherited Constants Summary  ==================== -->	
+    
+	
+	
+<!-- ============================== URI Summary  ==================== -->			
+    
+    
+    
+    
+			
+
+<!-- ============================== Inherited URI Summary  ==================== -->	
+    
+	
+    
+	
+<!-- ============================== Deprecation Notice  ==================== -->
+		
+	
+<!-- ============================== Constructor Details ========================= -->
+	
+<!-- ============================== Function details ========================= -->		
+	
+		
+			<div x-ww-support="bb5.0|bb6.0">
+				<h2><a name=".createNewDir"></a>
+				    blackberry.io.dir.createNewDir
+				</h2>
+				<hr style="margin-bottom:15px;"/>
+				
+				<table class="scriptTable">
+					<tr>
+						<td class="scriptTd">
+						static				
+						void
+						
+							createNewDir(path : String)
+													
+						</td>
+					</tr>
+				</table>
+				<br/>
+				
+							
+				
+								
+					<div class="title">Supported Platform(s)</div>		
+					
+						&nbsp;- BlackBerry OS 5.0+<br/>
+									
+				
+				
+				<br/>
+				<div class="title">Description</div>
+				&nbsp;Create an empty directory.
+				
+				
+					<br/><br/>
+					<div class="title">Returns</div>
+					
+						
+					
+				
+				
+				
+					<br/><br/>
+					<table class="confluenceTable">
+						<tr>
+						<th class="confluenceTh">
+						   Parameter
+						   
+						</th>
+						<th class="confluenceTh">
+						   Type
+						   
+						</th>
+						<th class="confluenceTh">
+						   Description
+						   
+						</th>
+						</tr>
+									
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>path</b></td>
+							<td class="confluenceTd">
+								
+									String
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								path location of the new directory. The name of the new directory should be included as parts of the path.							
+								
+							</td>
+						</tr>
+									
+					</table>
+				
+				
+				
+				
+							
+				
+			</div>
+		
+			<div x-ww-support="bb5.0|bb6.0">
+				<h2><a name=".deleteDirectory"></a>
+				    blackberry.io.dir.deleteDirectory
+				</h2>
+				<hr style="margin-bottom:15px;"/>
+				
+				<table class="scriptTable">
+					<tr>
+						<td class="scriptTd">
+						static				
+						void
+						
+							deleteDirectory(path : String, <i>[recursive: Boolean]</i>)
+													
+						</td>
+					</tr>
+				</table>
+				<br/>
+				
+							
+				
+								
+					<div class="title">Supported Platform(s)</div>		
+					
+						&nbsp;- BlackBerry OS 5.0+<br/>
+									
+				
+				
+				<br/>
+				<div class="title">Description</div>
+				&nbsp;Delete a given directory. The directory has to be empty unless the recursive flag is set to true.
+				
+				
+					<br/><br/>
+					<div class="title">Returns</div>
+					
+						
+					
+				
+				
+				
+					<br/><br/>
+					<table class="confluenceTable">
+						<tr>
+						<th class="confluenceTh">
+						   Parameter
+						   
+						</th>
+						<th class="confluenceTh">
+						   Type
+						   
+						</th>
+						<th class="confluenceTh">
+						   Description
+						   
+						</th>
+						</tr>
+									
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>path</b></td>
+							<td class="confluenceTd">
+								
+									String
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								path of the directory to be deleted.							
+								
+							</td>
+						</tr>
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>recursive</b></td>
+							<td class="confluenceTd">
+								
+									Boolean
+								
+								<br/><i>Optional</i>													
+							</td>
+							<td class="confluenceTd">
+								
+								flag to decide if all contents should be deleted							
+								
+							</td>
+						</tr>
+									
+					</table>
+				
+				
+				
+				
+							
+				
+			</div>
+		
+			<div x-ww-support="bb5.0|bb6.0">
+				<h2><a name=".exists"></a>
+				    blackberry.io.dir.exists
+				</h2>
+				<hr style="margin-bottom:15px;"/>
+				
+				<table class="scriptTable">
+					<tr>
+						<td class="scriptTd">
+						static				
+						Boolean
+						
+							exists(path : String)
+													
+						</td>
+					</tr>
+				</table>
+				<br/>
+				
+							
+				
+								
+					<div class="title">Supported Platform(s)</div>		
+					
+						&nbsp;- BlackBerry OS 5.0+<br/>
+									
+				
+				
+				<br/>
+				<div class="title">Description</div>
+				&nbsp;Determine whether a given directory exists or not.
+				
+				
+					<br/><br/>
+					<div class="title">Returns</div>
+					
+						True if the given directory exists; false otherwise.
+					
+				
+				
+				
+					<br/><br/>
+					<table class="confluenceTable">
+						<tr>
+						<th class="confluenceTh">
+						   Parameter
+						   
+						</th>
+						<th class="confluenceTh">
+						   Type
+						   
+						</th>
+						<th class="confluenceTh">
+						   Description
+						   
+						</th>
+						</tr>
+									
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>path</b></td>
+							<td class="confluenceTd">
+								
+									String
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								path location of the directory.							
+								
+							</td>
+						</tr>
+									
+					</table>
+				
+				
+				
+				
+							
+				
+			</div>
+		
+			<div x-ww-support="bb5.0|bb6.0">
+				<h2><a name=".getFreeSpaceForRoot"></a>
+				    blackberry.io.dir.getFreeSpaceForRoot
+				</h2>
+				<hr style="margin-bottom:15px;"/>
+				
+				<table class="scriptTable">
+					<tr>
+						<td class="scriptTd">
+						static				
+						Number
+						
+							getFreeSpaceForRoot(rootPath : String)
+													
+						</td>
+					</tr>
+				</table>
+				<br/>
+				
+							
+				
+								
+					<div class="title">Supported Platform(s)</div>		
+					
+						&nbsp;- BlackBerry OS 5.0+<br/>
+									
+				
+				
+				<br/>
+				<div class="title">Description</div>
+				&nbsp;Get the amount of free space available in the specified root.
+				
+				
+					<br/><br/>
+					<div class="title">Returns</div>
+					
+						The amound of free space availalble in the specified root.
+					
+				
+				
+				
+					<br/><br/>
+					<table class="confluenceTable">
+						<tr>
+						<th class="confluenceTh">
+						   Parameter
+						   
+						</th>
+						<th class="confluenceTh">
+						   Type
+						   
+						</th>
+						<th class="confluenceTh">
+						   Description
+						   
+						</th>
+						</tr>
+									
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>rootPath</b></td>
+							<td class="confluenceTd">
+								
+									String
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								Root path location to determine free space for.							
+								
+							</td>
+						</tr>
+									
+					</table>
+				
+				
+				
+				
+							
+				
+			</div>
+		
+			<div x-ww-support="bb5.0|bb6.0">
+				<h2><a name=".getParentDirectory"></a>
+				    blackberry.io.dir.getParentDirectory
+				</h2>
+				<hr style="margin-bottom:15px;"/>
+				
+				<table class="scriptTable">
+					<tr>
+						<td class="scriptTd">
+						static				
+						String
+						
+							getParentDirectory(path : String)
+													
+						</td>
+					</tr>
+				</table>
+				<br/>
+				
+							
+				
+								
+					<div class="title">Supported Platform(s)</div>		
+					
+						&nbsp;- BlackBerry OS 5.0+<br/>
+									
+				
+				
+				<br/>
+				<div class="title">Description</div>
+				&nbsp;Returns the path location of the directory that the given file or directory resides in.
+				
+				
+					<br/><br/>
+					<div class="title">Returns</div>
+					
+						The path location of the directory that the given file or directory resides in.
+					
+				
+				
+				
+					<br/><br/>
+					<table class="confluenceTable">
+						<tr>
+						<th class="confluenceTh">
+						   Parameter
+						   
+						</th>
+						<th class="confluenceTh">
+						   Type
+						   
+						</th>
+						<th class="confluenceTh">
+						   Description
+						   
+						</th>
+						</tr>
+									
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>path</b></td>
+							<td class="confluenceTd">
+								
+									String
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								Path of the directory or file.							
+								
+							</td>
+						</tr>
+									
+					</table>
+				
+				
+				
+				
+							
+				
+			</div>
+		
+			<div x-ww-support="bb5.0|bb6.0">
+				<h2><a name=".getRootDirs"></a>
+				    blackberry.io.dir.getRootDirs
+				</h2>
+				<hr style="margin-bottom:15px;"/>
+				
+				<table class="scriptTable">
+					<tr>
+						<td class="scriptTd">
+						static				
+						String[]
+						
+							getRootDirs()
+													
+						</td>
+					</tr>
+				</table>
+				<br/>
+				
+							
+				
+								
+					<div class="title">Supported Platform(s)</div>		
+					
+						&nbsp;- BlackBerry OS 5.0+<br/>
+									
+				
+				
+				<br/>
+				<div class="title">Description</div>
+				&nbsp;Get a list of root directories.
+				
+				
+					<br/><br/>
+					<div class="title">Returns</div>
+					
+						A string array containing all root directories.
+					
+				
+				
+				
+				
+				
+				
+							
+				
+			</div>
+		
+			<div x-ww-support="bb5.0|bb6.0">
+				<h2><a name=".listDirectories"></a>
+				    blackberry.io.dir.listDirectories
+				</h2>
+				<hr style="margin-bottom:15px;"/>
+				
+				<table class="scriptTable">
+					<tr>
+						<td class="scriptTd">
+						static				
+						String[]
+						
+							listDirectories(path : String)
+													
+						</td>
+					</tr>
+				</table>
+				<br/>
+				
+							
+				
+								
+					<div class="title">Supported Platform(s)</div>		
+					
+						&nbsp;- BlackBerry OS 5.0+<br/>
+									
+				
+				
+				<br/>
+				<div class="title">Description</div>
+				&nbsp;List all the directories that reside in a given directory.
+				
+				
+					<br/><br/>
+					<div class="title">Returns</div>
+					
+						A string array containing all the subdirectories in a given directory.
+					
+				
+				
+				
+					<br/><br/>
+					<table class="confluenceTable">
+						<tr>
+						<th class="confluenceTh">
+						   Parameter
+						   
+						</th>
+						<th class="confluenceTh">
+						   Type
+						   
+						</th>
+						<th class="confluenceTh">
+						   Description
+						   
+						</th>
+						</tr>
+									
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>path</b></td>
+							<td class="confluenceTd">
+								
+									String
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								path location of the directory.							
+								
+							</td>
+						</tr>
+									
+					</table>
+				
+				
+				
+				
+							
+				
+			</div>
+		
+			<div x-ww-support="bb5.0|bb6.0">
+				<h2><a name=".listFiles"></a>
+				    blackberry.io.dir.listFiles
+				</h2>
+				<hr style="margin-bottom:15px;"/>
+				
+				<table class="scriptTable">
+					<tr>
+						<td class="scriptTd">
+						static				
+						String[]
+						
+							listFiles(path : String)
+													
+						</td>
+					</tr>
+				</table>
+				<br/>
+				
+							
+				
+								
+					<div class="title">Supported Platform(s)</div>		
+					
+						&nbsp;- BlackBerry OS 5.0+<br/>
+									
+				
+				
+				<br/>
+				<div class="title">Description</div>
+				&nbsp;List all the files that reside in a given directory.
+				
+				
+					<br/><br/>
+					<div class="title">Returns</div>
+					
+						A string array containing all the files in the given directory.
+					
+				
+				
+				
+					<br/><br/>
+					<table class="confluenceTable">
+						<tr>
+						<th class="confluenceTh">
+						   Parameter
+						   
+						</th>
+						<th class="confluenceTh">
+						   Type
+						   
+						</th>
+						<th class="confluenceTh">
+						   Description
+						   
+						</th>
+						</tr>
+									
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>path</b></td>
+							<td class="confluenceTd">
+								
+									String
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								Path location of the directory.							
+								
+							</td>
+						</tr>
+									
+					</table>
+				
+				
+				
+				
+							
+				
+			</div>
+		
+			<div x-ww-support="bb5.0|bb6.0">
+				<h2><a name=".rename"></a>
+				    blackberry.io.dir.rename
+				</h2>
+				<hr style="margin-bottom:15px;"/>
+				
+				<table class="scriptTable">
+					<tr>
+						<td class="scriptTd">
+						static				
+						void
+						
+							rename(path : String, newDirectoryName : String)
+													
+						</td>
+					</tr>
+				</table>
+				<br/>
+				
+							
+				
+								
+					<div class="title">Supported Platform(s)</div>		
+					
+						&nbsp;- BlackBerry OS 5.0+<br/>
+									
+				
+				
+				<br/>
+				<div class="title">Description</div>
+				&nbsp;Rename a given directory.
+				
+				
+					<br/><br/>
+					<div class="title">Returns</div>
+					
+						
+					
+				
+				
+				
+					<br/><br/>
+					<table class="confluenceTable">
+						<tr>
+						<th class="confluenceTh">
+						   Parameter
+						   
+						</th>
+						<th class="confluenceTh">
+						   Type
+						   
+						</th>
+						<th class="confluenceTh">
+						   Description
+						   
+						</th>
+						</tr>
+									
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>path</b></td>
+							<td class="confluenceTd">
+								
+									String
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								path location of the directory to be renamed.							
+								
+							</td>
+						</tr>
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>newDirectoryName</b></td>
+							<td class="confluenceTd">
+								
+									String
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								the new name for the directory.							
+								
+							</td>
+						</tr>
+									
+					</table>
+				
+				
+				
+				
+							
+				
+			</div>
+		
+	
+			
+<!-- ============================== Event details ========================= -->		
+	
+<!-- ============================== properties details ========================== -->		
+	
+	
+<!-- ============================== constant details ========================== -->		
+	
+
+<!-- ============================== URI  ==================== -->			
+			
+				
+	
+	
+	
+		<div x-ww-support="bb5.0|bb6.0">
+			<h2><a name=".dir"> </a>Code Example(s)</h2>
+			<hr style="margin-bottom:15px;"/>
+			
+			<table class="scriptTable">				
+				<tr><td class="scriptTd">
+				<pre>&lt;script type=&quot;text&sol;javascript&quot;&gt;  var i;  var root = blackberry.io.dir.getRootDirs();  &sol;&sol; Loop through all the files in the first root directory and display them  var files = blackberry.io.dir.listFiles(root[0]);  for (i = 0; i &lt; files.length; i++) {    alert(files[i]);  }  var roots = blackberry.io.dir.getRootDirs();  for (i = 0; i &lt; roots.length; i++) {    alert(&quot;Free space on &apos;&quot; + roots[i] + &quot;&apos; is &quot; + blackberry.io.dir.getFreeSpaceForRoot(roots[i]) + &quot; bytes&quot;);  }&lt;&sol;script&gt;</pre>
+				</td></tr>				
+			</table>
+			
+		</div>
+	
+	
+	      	  	
+<!-- ============================== footer ================================= -->
+	<hr style="margin-bottom:15px;"/>
+	<div class="fineprint" style="clear:both">
+		
+		Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Jul 06 2011 21:05:00 GMT-0400 (EDT)
+	</div>
+	</body>
+</html>

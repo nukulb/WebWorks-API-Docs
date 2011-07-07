@@ -1,0 +1,465 @@
+<!--
+* Copyright 2010-2011 Research In Motion Limited.
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+-->
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- ============================== header ================================= -->	
+<html> 
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+		
+			<title>HTML5 Rotation Rate</title>
+		
+		
+		<style type="text/css">
+			.apiColumn {
+				width: 200px;
+			}
+			
+			.apiTable {
+				margin: 5px;
+				border-collapse: collapse;
+			}
+			
+			.apiYes {
+				background-color: #95B9C7;
+				color:#FAF8CC;
+				text-align:center;
+			}
+			
+			.apiNo {
+				background-color: #FAF8CC;
+				text-align:center;
+			}
+			
+			.apiTh {
+				border-width: 1px;
+				border-style: solid;
+				border-color: #ccc;
+				padding: 5px;
+				background-color: #f0f0f0;
+				text-align: left;
+				vertical-align: top;
+			}
+			
+			.apiTd {
+				border-width: 1px;
+				border-style: solid;
+				border-color: #ccc;
+				padding: 5px;
+				vertical-align: top;
+			}
+			
+			.apiProperty {
+				padding-left: 20px;
+			}
+			
+			table.betaTable {
+				border-width: 1px;
+				border-style: solid;
+				border-color: #ccc;
+				padding: 5px;
+				vertical-align: top;
+				margin: 5px;
+				margin-bottom:15px;
+				width : 90%;
+				background-color: #FCD8B9;
+			}
+			
+			td.betaTd {
+				color: #484848;
+				vertical-align: top;
+				background-color: #FCD8B9;
+			}
+			
+			table.learnTable {
+				border-width: 1px;
+				border-style: solid;
+				border-color: #ccc;
+				padding: 5px;
+				vertical-align: top;
+				margin: 5px;
+				margin-bottom:15px;
+				width : 90%;
+				background-color: #FAF8CC;
+			}
+			
+			td.learnTd {
+				color: #484848;
+				vertical-align: top;
+				background-color: #FAF8CC;
+			}
+
+		</style>
+	  
+		<link rel="stylesheet" href="common.css" type="text/css">
+		<script src="server.js"></script>
+	</head>
+	
+
+<!-- ============================== description ============================ -->
+	<p>
+		
+			Represents the Angular velocity of the motion.The orientation of the device is given in terms of the transfromation from a coordinate frame fixed on the Earth to a coordinate frame fixed in the device.The Earth coordinate frame is a 'East, North, Up' frame at the user's location. It has the following 3 axes, where the ground plane is tangent to the WGS 84 spheroid at the user's location.<ul><li>East (X) is in the ground plane, perpendicular to the North axis and positive towards the East.</li><li>North (Y) is in the ground plane and positive towards True North (towards the North Pole).</li><li>Up (Z) is perpendicular to the ground plane and positive upwards.</li></ul>For a mobile device, the device coordinate frame has the following 3 axes. The axes are defined relative to the standard orientation of the screen, typically portrait, when slide-out keyboards are not deployed. If the orientation of the screen changes when the device is rotated or a slide-out keyboard is deployed, this does not affect the orientation of the coordinate frame relative to the device. Users wishing to detect these changes in screen orientation may be able to do so with the existing orientationchange event.<ul><li>x is in the plane of the screen and is positive towards the right hand side of the screen.</li><li>y is in the plane of the screen and is positive towards the top of the screen.</li><li>z is perpendicular to the screen, positive out of the screen.</li></ul>The transformation from the Earth frame to the device frame is expressed in terms of 3 rotations, specified in the device frame. Rotations use the right-hand convention= positive rotation around an axis is clockwise when viewed along the positive direction of the axis.
+		
+	</p>
+	
+<!-- ============================== notice ============================ -->
+    
+
+    
+<!-- ============================== Beta Tag ============================ -->
+	
+
+
+<!-- ============================== Learning Resources ============================ -->
+	
+	
+<!-- ============================== Support Platforms ============================ -->
+	
+	
+	
+		
+		
+		
+		
+	
+	
+    
+    
+	
+		<div class="title">Supported Platform(s)</div>		
+		<table class="scriptTable">			
+			<tr> 
+				<td class="scriptTd">
+					
+						- BlackBerry PlayBook<br/>
+					
+				</td> 
+			</tr>
+			<tr>
+		 		<td>
+		 			<div>- Supported Platform Table: <span id="codeExpand" onclick="codeClick(this)";>Expand</span></div>
+		 			<div id="codeExamples">
+		 				<table class="apiTable">
+		 					<tr>
+								<th class="apiTh apiColumn">
+								   API
+								   
+								</th>
+								<th class="apiTh" >
+								   OS 5.0
+								   
+								</th>
+								<th class="apiTh" >
+								   OS 6.0
+								   
+								</th>
+								<th class="apiTh" >
+								   PlayBook
+								   
+								</th>
+							</tr>
+							
+							
+    							<tr x-ww-support="pb1.0">
+    								<td class="apiTd">
+    								<a href="RotationRate.html#alpha">alpha</a>								
+    								<td class="apiTd apiNo">&nbsp;</td>
+<td class="apiTd apiNo">&nbsp;</td>
+<td class="apiTd apiYes">Y</td>
+    							</tr>								
+							
+    							<tr x-ww-support="pb1.0">
+    								<td class="apiTd">
+    								<a href="RotationRate.html#beta">beta</a>								
+    								<td class="apiTd apiNo">&nbsp;</td>
+<td class="apiTd apiNo">&nbsp;</td>
+<td class="apiTd apiYes">Y</td>
+    							</tr>								
+							
+    							<tr x-ww-support="pb1.0">
+    								<td class="apiTd">
+    								<a href="RotationRate.html#gamma">gamma</a>								
+    								<td class="apiTd apiNo">&nbsp;</td>
+<td class="apiTd apiNo">&nbsp;</td>
+<td class="apiTd apiYes">Y</td>
+    							</tr>								
+							
+						</table>
+					</div>
+				</td>
+			</tr>			
+		</table>
+	
+	
+<!-- ============================== Permissions ============================ -->	
+	
+		<div class="title">Permissions</div>
+		This API does not require a &lt;feature&gt; element to be declared in the configuration document of your BlackBerry WebWorks.
+		<br/>
+	
+
+<!-- ============================== Constructor Summary ========================= -->
+	
+
+<!-- ============================== Deprecation setup  ==================== -->
+    
+    
+<!-- ============================== Function Summary  ==================== -->    
+     
+    
+    
+   
+
+<!-- ============================== Inherited Functions Summary  ==================== -->	
+    
+	
+        		
+	
+<!-- ============================== events summary ======================== -->
+    
+    
+    
+    
+	
+	
+<!-- ============================== Inherited Event Summary  ==================== -->	
+    
+	
+	
+<!-- ============================== Properties summary ===================== -->
+    
+    
+    
+        
+        <br/>
+        <div x-ww-support="pb1.0">
+            <h1>Properties</h1>
+    
+	
+			
+			<ul class="ulNoTopMargin">
+				
+					<li x-ww-support="pb1.0">
+                        <a href="RotationRate.html#alpha">alpha</a>
+						
+					</li>				
+				
+					<li x-ww-support="pb1.0">
+                        <a href="RotationRate.html#beta">beta</a>
+						
+					</li>				
+				
+					<li x-ww-support="pb1.0">
+                        <a href="RotationRate.html#gamma">gamma</a>
+						
+					</li>				
+				
+			</ul>
+	
+<!-- ============================== Inherited Properties Summary  ==================== -->	
+    
+	
+	
+        </div>
+    	
+<!-- ============================== Constants summary ===================== -->
+    
+	
+	
+	
+	
+
+<!-- ============================== Inherited Constants Summary  ==================== -->	
+    
+	
+	
+<!-- ============================== URI Summary  ==================== -->			
+    
+    
+    
+    
+			
+
+<!-- ============================== Inherited URI Summary  ==================== -->	
+    
+	
+    
+	
+<!-- ============================== Deprecation Notice  ==================== -->
+		
+	
+<!-- ============================== Constructor Details ========================= -->
+	
+<!-- ============================== Function details ========================= -->		
+	
+			
+<!-- ============================== Event details ========================= -->		
+	
+<!-- ============================== properties details ========================== -->		
+	
+	   
+		<div x-ww-support="pb1.0">
+			<h2>Properties:</h2>
+			<hr style="margin-bottom:15px;"/>
+		  
+			<table class="confluenceTable">
+				<tr>
+					<th class="confluenceTh">
+					Property
+			       
+					</th>
+					<th class="confluenceTh">
+					   Type
+					   
+					</th>
+					<th class="confluenceTh">
+					   Description
+					   
+					</th>
+					<th class="confluenceThnoverflow">
+					   Supported Platform(s)
+					   
+					</th>
+				</tr>
+				
+				
+				<tr x-ww-support="pb1.0">
+					<td class="confluenceTd"><a name="alpha" class="propertyName">alpha</a></td>
+					<td class="confluenceTd">
+						
+						
+							Number
+						
+						
+							 = 90
+						
+						
+							<br/>readonly
+						
+					</td>
+					
+					<td class="confluenceTd"><br/> <image src="images/a-rotation.jpg"></br> Returns the rotation angle around the device frame's Z-axis in degrees.
+					
+						<br/>
+						
+					
+									
+					</td>
+					
+					<td class="confluenceTdnoverflow">
+										
+							
+								&nbsp;- BlackBerry PlayBook<br/>
+												
+						
+					</td>
+				</tr>
+				
+				<tr x-ww-support="pb1.0">
+					<td class="confluenceTd"><a name="beta" class="propertyName">beta</a></td>
+					<td class="confluenceTd">
+						
+						
+							Number
+						
+						
+							 = 0
+						
+						
+							<br/>readonly
+						
+					</td>
+					
+					<td class="confluenceTd"><br/> <image src="images/b-rotation.jpg"></br> Returns the rotation angle around the device frame's X-axis in degrees.
+					
+						<br/>
+						
+					
+									
+					</td>
+					
+					<td class="confluenceTdnoverflow">
+										
+							
+								&nbsp;- BlackBerry PlayBook<br/>
+												
+						
+					</td>
+				</tr>
+				
+				<tr x-ww-support="pb1.0">
+					<td class="confluenceTd"><a name="gamma" class="propertyName">gamma</a></td>
+					<td class="confluenceTd">
+						
+						
+							Number
+						
+						
+							 = 0
+						
+						
+							<br/>readonly
+						
+					</td>
+					
+					<td class="confluenceTd"><br/> <image src="images/g-rotation.jpg"></br> Returns the rotation angle around the device frame's Y-axis in degrees.
+					
+						<br/>
+						
+					
+									
+					</td>
+					
+					<td class="confluenceTdnoverflow">
+										
+							
+								&nbsp;- BlackBerry PlayBook<br/>
+												
+						
+					</td>
+				</tr>
+				
+			</table>
+			
+			
+				
+			
+				
+			
+				
+			
+		</div>
+	
+	
+<!-- ============================== constant details ========================== -->		
+	
+
+<!-- ============================== URI  ==================== -->			
+	
+	
+	
+	
+	      	  	
+<!-- ============================== footer ================================= -->
+	<hr style="margin-bottom:15px;"/>
+	<div class="fineprint" style="clear:both">
+		
+		Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Jul 06 2011 21:05:01 GMT-0400 (EDT)
+	</div>
+	</body>
+</html>

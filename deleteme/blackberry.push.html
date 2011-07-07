@@ -1,0 +1,603 @@
+<!--
+* Copyright 2010-2011 Research In Motion Limited.
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.-->
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- ============================== header ================================= -->    
+<html> 
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+        
+            <title>Push</title>
+        
+        
+        <style type="text/css">
+            .apiColumn {
+                width: 200px;
+            }
+            
+            .apiTable {
+                margin: 5px;
+                border-collapse: collapse;
+            }
+            
+            .apiYes {
+                background-color: #95B9C7;
+                color:#FAF8CC;
+                text-align:center;
+            }
+            
+            .apiNo {
+                background-color: #FAF8CC;
+                text-align:center;
+            }
+            
+            .apiTh {
+                border-width: 1px;
+                border-style: solid;
+                border-color: #ccc;
+                padding: 5px;
+                background-color: #f0f0f0;
+                text-align: left;
+                vertical-align: top;
+            }
+            
+            .apiTd {
+                border-width: 1px;
+                border-style: solid;
+                border-color: #ccc;
+                padding: 5px;
+                vertical-align: top;
+            }
+            
+            .apiProperty {
+                padding-left: 20px;
+            }
+            
+            .elemTh {
+                text-align: left;
+                vertical-align: top;
+                color: #616161;
+            }
+            
+            table.betaTable {
+                border-width: 1px;
+                border-style: solid;
+                border-color: #ccc;
+                padding: 5px;
+                vertical-align: top;
+                margin: 5px;
+                margin-bottom:15px;
+                width : 90%;
+                background-color: #FCD8B9;
+            }
+            
+            td.betaTd {
+                color: #484848;
+                vertical-align: top;
+                background-color: #FCD8B9;
+            }
+            #APISupportTable {
+                display: none;
+            }
+            #FeatureIDSupportTable {
+                display: none;
+            }
+        </style>
+      
+        <link rel="stylesheet" href="common.css" type="text/css" />
+        <script src="server.js" type="text/javascript"></script>
+    </head>
+    
+<!-- ============================== Body ============================ -->   
+    <body><div class="scrollable" id="content">     
+    
+<!-- ============================== description ============================ -->
+        <p>
+            
+                The Push object allows you to leverage the BlackBerry push architecture to receive push data in your application.
+            
+        </p>
+        
+<!-- ============================== notice ============================ -->
+        
+    
+        
+        
+<!-- ============================== Beta Tag ============================ -->
+        
+    
+<!-- ============================== Learning Resources ============================ -->
+        
+        
+<!-- ============================== Support Platforms ============================ -->
+        
+        
+            
+            
+            
+            
+        
+        
+            
+            
+            
+            
+        
+        
+        
+        
+        
+            <div class="title">Supported Platform(s)</div>      
+            <table class="scriptTable">         
+                <tr> 
+                    <td class="scriptTd">
+                        
+                            - BlackBerry OS 5.0+<br/>
+                        
+                    </td> 
+                </tr>
+                <tr>
+                    <td>
+                        <div>- Supported Platform Table: <span id="codeExpand" onclick="codeClick('APISupportTable',this)";>Expand</span></div>
+                        <div id="APISupportTable">
+                            <table class="apiTable">
+                                <tr>
+                                    <th class="apiTh apiColumn">
+                                       API
+                                       
+                                    </th>
+                                    <th class="apiTh" >
+                                       OS 5.0
+                                       
+                                    </th>
+                                    <th class="apiTh" >
+                                       OS 6.0
+                                       
+                                    </th>
+                                    <th class="apiTh" >
+                                       PlayBook
+                                       
+                                    </th>
+                                </tr>
+                                
+                                
+                                    <tr x-ww-support="bb5.0|bb6.0">
+                                        <td class="apiTd">
+                                            <a href="blackberry.push.html#.closePushListener">blackberry.push.closePushListener</a>                               
+                                            <td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+                                        </td>
+                                    </tr>                               
+                                
+                                    <tr x-ww-support="bb5.0|bb6.0">
+                                        <td class="apiTd">
+                                            <a href="blackberry.push.html#.openPushListener">blackberry.push.openPushListener</a>                               
+                                            <td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+                                        </td>
+                                    </tr>                               
+                                
+                            </table>
+                        </div>
+                    </td>
+                </tr>           
+            </table>
+        
+        
+<!-- ============================== Configuration Settings  ============================ -->	
+    <br/>
+    <div class="title">Configuration Document Settings</div>
+        To use <u>all</u> of the API described for this object, you must ensure the following settings are in your configuration document:      
+    
+    <table class="scriptTable">
+        <tr>
+            <th class="elemTh">Feature Elements</th>
+        </tr>
+        
+            <tr><td class="scriptTd">
+            You must declare the feature element(s) below in your configuration document:
+            </td></tr>
+            <br>
+            <tr><td>
+                <div>- Supported Feature ID Table: <span id="codeExpand" onclick="codeClick('FeatureIDSupportTable',this)";>Expand</span></div>
+                <div id="FeatureIDSupportTable">
+                    <table class="apiTable">
+                        <tr>
+                            <th class="apiTh apiColumn">
+                               Feature ID
+                               
+                            </th>
+                            <th class="apiTh" >
+                               OS 5.0
+                               
+                            </th>
+                            <th class="apiTh" >
+                               OS 6.0
+                               
+                            </th>
+                            <th class="apiTh" >
+                               PlayBook
+                               
+                            </th>
+                        </tr>
+                        
+                          
+                            
+                                
+                            
+                            <tr x-ww-support="bb5.0|bb6.0">
+                                <td class="apiTd">
+                                    blackberry.push                               
+                                    <td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+                                </td>
+                            </tr>
+                        
+                    </table>
+                 </div>
+             </td></tr>       
+        
+    </table>
+    
+    <div x-ww-support="pb1.0">
+        <table class="scriptTable">
+        <tr><th class="elemTh">Permission Elements (PlayBook Only)</th></tr>
+        
+            <tr><td class="scriptTd">
+            This API does not require a &lt;permission&gt; element to be declared in the configuration document of your BlackBerry WebWorks Application.
+            </td></tr><br/>
+        
+        </table>
+    </div>
+
+<!-- ============================== Constructor Summary ========================= -->
+        
+    
+<!-- ============================== Deprecation setup  ==================== -->
+        
+        
+<!-- ============================== Function Summary  ==================== -->    
+        
+        
+            
+            <br/>
+            <div x-ww-support="bb5.0|bb6.0">
+                <h1>Functions</h1>
+        
+        
+                  
+                <ul class="ulNoTopMargin">          
+                    
+                        <li x-ww-support="bb5.0|bb6.0">
+                            <a href="blackberry.push.html#.closePushListener">blackberry.push.closePushListener</a>
+                            
+                        </li>               
+                    
+                        <li x-ww-support="bb5.0|bb6.0">
+                            <a href="blackberry.push.html#.openPushListener">blackberry.push.openPushListener</a>
+                            
+                        </li>               
+                    
+                </ul>   
+       
+    
+    <!-- ============================== Inherited Functions Summary  ==================== -->   
+        
+        
+        
+            </div>
+                   
+        
+<!-- ============================== events summary ======================== -->
+        
+        
+        
+        
+        
+        
+<!-- ============================== Inherited Event Summary  ==================== -->   
+        
+        
+        
+<!-- ============================== Properties summary ===================== -->
+        
+        
+        
+        
+        
+<!-- ============================== Inherited Properties Summary  ==================== -->  
+        
+        
+           
+<!-- ============================== Constants summary ===================== -->
+        
+        
+        
+        
+        
+    
+<!-- ============================== Inherited Constants Summary  ==================== -->   
+        
+        
+        
+<!-- ============================== URI Summary  ==================== -->           
+        
+        
+        
+        
+               
+    
+<!-- ============================== Inherited URI Summary  ==================== --> 
+        
+        
+        
+        
+<!-- ============================== Deprecation Notice  ==================== -->
+           
+        
+<!-- ============================== Constructor Details ========================= -->
+        
+<!-- ============================== Function details ========================= -->      
+        
+            
+                <div x-ww-support="bb5.0|bb6.0">
+                    <h2><a name=".closePushListener"></a>
+                        blackberry.push.closePushListener
+                    </h2>
+                    <hr style="margin-bottom: 15px;"/>
+                    
+                    <table class="scriptTable">
+                        <tr>
+                            <td class="scriptTd">
+                                static              
+                                void
+                                
+                                    closePushListener(port : Number)
+                                                           
+                            </td>
+                        </tr>
+                    </table>
+                    <br/>
+                    
+                               
+                    
+                                  
+                        <div class="title">Supported Platform(s)</div>      
+                        
+                            &nbsp;- BlackBerry OS 5.0+<br/>
+                                      
+                                       
+                    <br/>
+                    
+                    <div class="title">Description</div>
+                    &nbsp;Closes the listening connection for an already open push channel. <br/><br/>When this close is called, it will stop listening for incoming data on the push port.
+                    
+                    
+                    
+                    
+                        <br/><br/>
+                        <table class="confluenceTable">
+                            <tr>
+                                <th class="confluenceTh">
+                                   Parameter
+                                   
+                                </th>
+                                <th class="confluenceTh">
+                                   Type
+                                   
+                                </th>
+                                <th class="confluenceTh">
+                                   Description
+                                   
+                                </th>
+                            </tr>
+                                           
+                            
+                                
+                                <tr>
+                                    <td class="confluenceTd"><b>port</b></td>
+                                    <td class="confluenceTd">
+                                        
+                                            Number
+                                        
+                                                                                            
+                                    </td>
+                                    <td class="confluenceTd">
+                                        
+                                        Unique listener integer port used in the original openPushListener method.                         
+                                        
+                                    </td>
+                                </tr>
+                                          
+                        </table>
+                                       
+                    
+                    
+                                
+                    
+                </div>
+            
+                <div x-ww-support="bb5.0|bb6.0">
+                    <h2><a name=".openPushListener"></a>
+                        blackberry.push.openPushListener
+                    </h2>
+                    <hr style="margin-bottom: 15px;"/>
+                    
+                    <table class="scriptTable">
+                        <tr>
+                            <td class="scriptTd">
+                                static              
+                                void
+                                
+                                    openPushListener(onData : function, port : Number, <i>[transport: blackberry.identity.Transport]</i>, <i>[maxQueueCap: Number]</i>)
+                                                           
+                            </td>
+                        </tr>
+                    </table>
+                    <br/>
+                    
+                               
+                    
+                                  
+                        <div class="title">Supported Platform(s)</div>      
+                        
+                            &nbsp;- BlackBerry OS 5.0+<br/>
+                                      
+                                       
+                    <br/>
+                    
+                    <div class="title">Description</div>
+                    &nbsp;Registers a callback function that will be called when new data has been pushed to the device. <br/><br/>The function that is assigned as the onData callback function will be called with one parameter passed to it. The object passed to the callback function is of type <a href="blackberry.push.Data.html">blackberry.push.Data</a> which has a payload property which is a Blob. The developer can then retrieve the data either as the Blob or use .toString() if the data contained in the Blob is a string. <br/><br/>Furthermore, the callback function must return an integer (one of constants described in blackberry.push.Data) indicating if the push message is accepted or declined. <br/><br/>Since the state for JavaScript for a web page is only as long as the web page is being viewed, there is a need for the app to maintain the open port for push information. This allows this listening for push data to remain open between page transitions. If no current active callback is assigned to the push listener, the app will queue the push data (limiting the number of messages using maxQueueCap if available) for the application until a subsequent openPushListener call is made for that port. <br/><br/>At that point it will then pass the data to the subscribed callback function. To subscribe to the same previously opened push port on a new web page, a secondary call to openPushListener is called. In this scenario it will reassign the callback provided to the already open port. <br/><br/>If calling openPushListener on a page where the port is already open, the callback will be updated to use the latest one passed in. <b>NOTE:</b> In such cases where consecutive calls to openPushListener occurs on the page,the transport argument will only be used on the first call, and ignored for all others. Any calls to openPushListener should have matching calls to closePushListener to ensure ports are not left open accidentally.
+                    
+                    
+                    
+                    
+                        <br/><br/>
+                        <table class="confluenceTable">
+                            <tr>
+                                <th class="confluenceTh">
+                                   Parameter
+                                   
+                                </th>
+                                <th class="confluenceTh">
+                                   Type
+                                   
+                                </th>
+                                <th class="confluenceTh">
+                                   Description
+                                   
+                                </th>
+                            </tr>
+                                           
+                            
+                                
+                                <tr>
+                                    <td class="confluenceTd"><b>onData</b></td>
+                                    <td class="confluenceTd">
+                                        
+                                            function(data : <a href="blackberry.push.Data.html">blackberry.push.Data</a>)
+                                        
+                                                                                            
+                                    </td>
+                                    <td class="confluenceTd">
+                                        
+                                        This callback function is triggered when data is received.                         
+                                        
+                                            <br/>
+                                            
+                                                <br/>
+                                                <b>data:</b> Object that contains the data that was just received
+                                            
+                                        
+                                    </td>
+                                </tr>
+                            
+                                
+                                <tr>
+                                    <td class="confluenceTd"><b>port</b></td>
+                                    <td class="confluenceTd">
+                                        
+                                            Number
+                                        
+                                                                                            
+                                    </td>
+                                    <td class="confluenceTd">
+                                        
+                                        Integer port number to listen on for push data.                         
+                                        
+                                    </td>
+                                </tr>
+                            
+                                
+                                <tr>
+                                    <td class="confluenceTd"><b>transport</b></td>
+                                    <td class="confluenceTd">
+                                        
+                                            <a href="blackberry.identity.Transport.html">blackberry.identity.Transport</a>
+                                        
+                                        <br/><i>Optional</i>                                                    
+                                    </td>
+                                    <td class="confluenceTd">
+                                        
+                                        Optional parameter where you can choose which communications transport you wish to listen on.                         
+                                        
+                                    </td>
+                                </tr>
+                            
+                                
+                                <tr>
+                                    <td class="confluenceTd"><b>maxQueueCap</b></td>
+                                    <td class="confluenceTd">
+                                        
+                                            Number
+                                        
+                                        <br/><i>Optional</i>                                                    
+                                    </td>
+                                    <td class="confluenceTd">
+                                        
+                                        Optional parameter that specifies how many messages the app should queue if the port was not closed, but a function handler was lost (for example, during a page transition). See details.                         
+                                        
+                                    </td>
+                                </tr>
+                                          
+                        </table>
+                                       
+                    
+                    
+                                
+                    
+                        <br/>
+                        <div class="title">Code Example(s)</div>
+                        
+                            <table class="scriptTable">             
+                                <tr><td class="scriptTd">
+                                    <pre>&lt;script  type=&quot;text/javascript&quot;&gt;  var port = 1234;   function doMySubscription() {    &sol;&sol;See if they have a BIS transport.. if so use it    var transports = blackberry.system.getTransportList();    found = false;    for (var i = 0; i &lt; transports.length; i++) {      if (transports[i].name == &quot;BIS&quot;) {        found = true;        blackberry.push.openPushListener(handleMyReturnData, port, transport[i]);        break;      }    }    if (!found)      blackberry.push.openPushListener(handleMyReturnData, port);  }  function handleMyReturnData(data) {    if (data != null) {      var myRecievedData= blackberry.utils.blobToString(data.payload)      alert(myRecievedData);    }    else      alert(&quot;No data from the push&quot;);  }  function cancelSubscription() {    blackberry.push.closePushListener(port);  }&lt;/script&gt;</pre>
+                                </td></tr>              
+                            </table>
+                        
+                    
+                </div>
+            
+        
+                
+<!-- ============================== Event details ========================= -->     
+        
+<!-- ============================== properties details ========================== -->       
+        
+        
+<!-- ============================== constant details ========================== -->     
+        
+    
+<!-- ============================== URI  ==================== -->           
+             
+                   
+        
+        
+        
+        
+                    
+<!-- ============================== footer ================================= -->
+        <hr style="margin-bottom: 15px;"/>
+        <div class="fineprint" style="clear: both">
+            
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Jul 06 2011 21:04:39 GMT-0400 (EDT)
+        </div>
+        
+    </div></body>
+</html>

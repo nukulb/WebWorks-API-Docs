@@ -1,0 +1,1189 @@
+<!--
+* Copyright 2010-2011 Research In Motion Limited.
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+-->
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- ============================== header ================================= -->	
+<html> 
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+		
+			<title>File</title>
+		
+		
+		<style type="text/css">
+			.apiColumn {
+				width: 200px;
+			}
+			
+			.apiTable {
+				margin: 5px;
+				border-collapse: collapse;
+			}
+			
+			.apiYes {
+				background-color: #95B9C7;
+				color:#FAF8CC;
+				text-align:center;
+			}
+			
+			.apiNo {
+				background-color: #FAF8CC;
+				text-align:center;
+			}
+			
+			.apiTh {
+				border-width: 1px;
+				border-style: solid;
+				border-color: #ccc;
+				padding: 5px;
+				background-color: #f0f0f0;
+				text-align: left;
+				vertical-align: top;
+			}
+			
+			.apiTd {
+				border-width: 1px;
+				border-style: solid;
+				border-color: #ccc;
+				padding: 5px;
+				vertical-align: top;
+			}
+			
+			.apiProperty {
+				padding-left: 20px;
+			}
+			
+			table.betaTable {
+				border-width: 1px;
+				border-style: solid;
+				border-color: #ccc;
+				padding: 5px;
+				vertical-align: top;
+				margin: 5px;
+				margin-bottom:15px;
+				width : 90%;
+				background-color: #FCD8B9;
+			}
+			
+			td.betaTd {
+				color: #484848;
+				vertical-align: top;
+				background-color: #FCD8B9;
+			}
+			
+			table.learnTable {
+				border-width: 1px;
+				border-style: solid;
+				border-color: #ccc;
+				padding: 5px;
+				vertical-align: top;
+				margin: 5px;
+				margin-bottom:15px;
+				width : 90%;
+				background-color: #FAF8CC;
+			}
+			
+			td.learnTd {
+				color: #484848;
+				vertical-align: top;
+				background-color: #FAF8CC;
+			}
+
+		</style>
+	  
+		<link rel="stylesheet" href="common.css" type="text/css">
+		<script src="server.js"></script>
+	</head>
+	
+
+<!-- ============================== description ============================ -->
+	<p>
+		
+			The File object provides functions for interacting with the file system.
+		
+	</p>
+	
+<!-- ============================== notice ============================ -->
+    
+
+    
+<!-- ============================== Beta Tag ============================ -->
+	
+
+
+<!-- ============================== Learning Resources ============================ -->
+	
+	
+<!-- ============================== Support Platforms ============================ -->
+	
+	
+		
+		
+		
+		
+	
+	
+		
+		
+		
+		
+	
+	
+    
+    
+	
+		<div class="title">Supported Platform(s)</div>		
+		<table class="scriptTable">			
+			<tr> 
+				<td class="scriptTd">
+					
+						- BlackBerry OS 5.0+<br/>
+					
+				</td> 
+			</tr>
+			<tr>
+		 		<td>
+		 			<div>- Supported Platform Table: <span id="codeExpand" onclick="codeClick(this)";>Expand</span></div>
+		 			<div id="codeExamples">
+		 				<table class="apiTable">
+		 					<tr>
+								<th class="apiTh apiColumn">
+								   API
+								   
+								</th>
+								<th class="apiTh" >
+								   OS 5.0
+								   
+								</th>
+								<th class="apiTh" >
+								   OS 6.0
+								   
+								</th>
+								<th class="apiTh" >
+								   PlayBook
+								   
+								</th>
+							</tr>
+							
+							
+    							<tr x-ww-support="bb5.0|bb6.0">
+    								<td class="apiTd">
+    								<a href="blackberry.io.file.html#.copy">blackberry.io.file.copy</a>								
+    								<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+    							</tr>								
+							
+    							<tr x-ww-support="bb5.0|bb6.0">
+    								<td class="apiTd">
+    								<a href="blackberry.io.file.html#.deleteFile">blackberry.io.file.deleteFile</a>								
+    								<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+    							</tr>								
+							
+    							<tr x-ww-support="bb5.0|bb6.0">
+    								<td class="apiTd">
+    								<a href="blackberry.io.file.html#.exists">blackberry.io.file.exists</a>								
+    								<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+    							</tr>								
+							
+    							<tr x-ww-support="bb5.0|bb6.0">
+    								<td class="apiTd">
+    								<a href="blackberry.io.file.html#.getFileProperties">blackberry.io.file.getFileProperties</a>								
+    								<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+    							</tr>								
+							
+    							<tr x-ww-support="bb5.0|bb6.0">
+    								<td class="apiTd">
+    								<a href="blackberry.io.file.html#.open">blackberry.io.file.open</a>								
+    								<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+    							</tr>								
+							
+    							<tr x-ww-support="bb5.0|bb6.0">
+    								<td class="apiTd">
+    								<a href="blackberry.io.file.html#.readFile">blackberry.io.file.readFile</a>								
+    								<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+    							</tr>								
+							
+    							<tr x-ww-support="bb5.0|bb6.0">
+    								<td class="apiTd">
+    								<a href="blackberry.io.file.html#.rename">blackberry.io.file.rename</a>								
+    								<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+    							</tr>								
+							
+    							<tr x-ww-support="bb5.0|bb6.0">
+    								<td class="apiTd">
+    								<a href="blackberry.io.file.html#.saveFile">blackberry.io.file.saveFile</a>								
+    								<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+    							</tr>								
+							
+						</table>
+					</div>
+				</td>
+			</tr>			
+		</table>
+	
+	
+<!-- ============================== Permissions ============================ -->	
+	
+		<div class="title">Permissions</div>
+		To use <u>all</u> of the API described for this object, you must declare the below feature element(s) in your configuration document:
+		<br>
+		<table class="scriptTable">
+			
+				<tr> 
+					<td class="scriptTd"> 
+						&lt;feature id="blackberry.io.file" /&gt;
+						<br>
+					</td> 
+				</tr>
+			
+		</table>
+	
+
+<!-- ============================== Constructor Summary ========================= -->
+	
+
+<!-- ============================== Deprecation setup  ==================== -->
+    
+    
+<!-- ============================== Function Summary  ==================== -->    
+     
+    
+        
+        <br/>
+        <div x-ww-support="bb5.0|bb6.0">
+            <h1>Functions</h1>
+    
+    
+   			
+    		<ul class="ulNoTopMargin">			
+    			
+    				<li x-ww-support="bb5.0|bb6.0">
+    				    <a href="blackberry.io.file.html#.copy">blackberry.io.file.copy</a>
+    					
+    				</li>				
+    			
+    				<li x-ww-support="bb5.0|bb6.0">
+    				    <a href="blackberry.io.file.html#.deleteFile">blackberry.io.file.deleteFile</a>
+    					
+    				</li>				
+    			
+    				<li x-ww-support="bb5.0|bb6.0">
+    				    <a href="blackberry.io.file.html#.exists">blackberry.io.file.exists</a>
+    					
+    				</li>				
+    			
+    				<li x-ww-support="bb5.0|bb6.0">
+    				    <a href="blackberry.io.file.html#.getFileProperties">blackberry.io.file.getFileProperties</a>
+    					
+    				</li>				
+    			
+    				<li x-ww-support="bb5.0|bb6.0">
+    				    <a href="blackberry.io.file.html#.open">blackberry.io.file.open</a>
+    					
+    				</li>				
+    			
+    				<li x-ww-support="bb5.0|bb6.0">
+    				    <a href="blackberry.io.file.html#.readFile">blackberry.io.file.readFile</a>
+    					
+    				</li>				
+    			
+    				<li x-ww-support="bb5.0|bb6.0">
+    				    <a href="blackberry.io.file.html#.rename">blackberry.io.file.rename</a>
+    					
+    				</li>				
+    			
+    				<li x-ww-support="bb5.0|bb6.0">
+    				    <a href="blackberry.io.file.html#.saveFile">blackberry.io.file.saveFile</a>
+    					
+    				</li>				
+    			
+    		</ul>	
+   
+
+<!-- ============================== Inherited Functions Summary  ==================== -->	
+    
+	
+    
+        </div>
+        		
+	
+<!-- ============================== events summary ======================== -->
+    
+    
+    
+    
+	
+	
+<!-- ============================== Inherited Event Summary  ==================== -->	
+    
+	
+	
+<!-- ============================== Properties summary ===================== -->
+    
+    
+    
+	
+	
+<!-- ============================== Inherited Properties Summary  ==================== -->	
+    
+	
+		
+<!-- ============================== Constants summary ===================== -->
+    
+	
+	
+	
+	
+
+<!-- ============================== Inherited Constants Summary  ==================== -->	
+    
+	
+	
+<!-- ============================== URI Summary  ==================== -->			
+    
+    
+    
+    
+			
+
+<!-- ============================== Inherited URI Summary  ==================== -->	
+    
+	
+    
+	
+<!-- ============================== Deprecation Notice  ==================== -->
+		
+	
+<!-- ============================== Constructor Details ========================= -->
+	
+<!-- ============================== Function details ========================= -->		
+	
+		
+			<div x-ww-support="bb5.0|bb6.0">
+				<h2><a name=".copy"></a>
+				    blackberry.io.file.copy
+				</h2>
+				<hr style="margin-bottom:15px;"/>
+				
+				<table class="scriptTable">
+					<tr>
+						<td class="scriptTd">
+						static				
+						void
+						
+							copy(sourcePath : String, targetPath : String)
+													
+						</td>
+					</tr>
+				</table>
+				<br/>
+				
+							
+				
+								
+					<div class="title">Supported Platform(s)</div>		
+					
+						&nbsp;- BlackBerry OS 5.0+<br/>
+									
+				
+				
+				<br/>
+				<div class="title">Description</div>
+				&nbsp;Copy a file to a given destination.
+				
+				
+					<br/><br/>
+					<div class="title">Returns</div>
+					
+						
+					
+				
+				
+				
+					<br/><br/>
+					<table class="confluenceTable">
+						<tr>
+						<th class="confluenceTh">
+						   Parameter
+						   
+						</th>
+						<th class="confluenceTh">
+						   Type
+						   
+						</th>
+						<th class="confluenceTh">
+						   Description
+						   
+						</th>
+						</tr>
+									
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>sourcePath</b></td>
+							<td class="confluenceTd">
+								
+									String
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								local storage file path to the file to be copied							
+								
+							</td>
+						</tr>
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>targetPath</b></td>
+							<td class="confluenceTd">
+								
+									String
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								local storage file path to the new copied file. The name of the copied file should be specified at the end of the targetPath.							
+								
+							</td>
+						</tr>
+									
+					</table>
+				
+				
+				
+				
+							
+				
+			</div>
+		
+			<div x-ww-support="bb5.0|bb6.0">
+				<h2><a name=".deleteFile"></a>
+				    blackberry.io.file.deleteFile
+				</h2>
+				<hr style="margin-bottom:15px;"/>
+				
+				<table class="scriptTable">
+					<tr>
+						<td class="scriptTd">
+						static				
+						void
+						
+							deleteFile(path : String)
+													
+						</td>
+					</tr>
+				</table>
+				<br/>
+				
+							
+				
+								
+					<div class="title">Supported Platform(s)</div>		
+					
+						&nbsp;- BlackBerry OS 5.0+<br/>
+									
+				
+				
+				<br/>
+				<div class="title">Description</div>
+				&nbsp;Delete a given file.
+				
+				
+					<br/><br/>
+					<div class="title">Returns</div>
+					
+						
+					
+				
+				
+				
+					<br/><br/>
+					<table class="confluenceTable">
+						<tr>
+						<th class="confluenceTh">
+						   Parameter
+						   
+						</th>
+						<th class="confluenceTh">
+						   Type
+						   
+						</th>
+						<th class="confluenceTh">
+						   Description
+						   
+						</th>
+						</tr>
+									
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>path</b></td>
+							<td class="confluenceTd">
+								
+									String
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								local storage file path to the file to be deleted							
+								
+							</td>
+						</tr>
+									
+					</table>
+				
+				
+				
+				
+							
+				
+			</div>
+		
+			<div x-ww-support="bb5.0|bb6.0">
+				<h2><a name=".exists"></a>
+				    blackberry.io.file.exists
+				</h2>
+				<hr style="margin-bottom:15px;"/>
+				
+				<table class="scriptTable">
+					<tr>
+						<td class="scriptTd">
+						static				
+						Boolean
+						
+							exists(path : String)
+													
+						</td>
+					</tr>
+				</table>
+				<br/>
+				
+							
+				
+								
+					<div class="title">Supported Platform(s)</div>		
+					
+						&nbsp;- BlackBerry OS 5.0+<br/>
+									
+				
+				
+				<br/>
+				<div class="title">Description</div>
+				&nbsp;Check whether or not a given file exists.
+				
+				
+					<br/><br/>
+					<div class="title">Returns</div>
+					
+						
+					
+				
+				
+				
+					<br/><br/>
+					<table class="confluenceTable">
+						<tr>
+						<th class="confluenceTh">
+						   Parameter
+						   
+						</th>
+						<th class="confluenceTh">
+						   Type
+						   
+						</th>
+						<th class="confluenceTh">
+						   Description
+						   
+						</th>
+						</tr>
+									
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>path</b></td>
+							<td class="confluenceTd">
+								
+									String
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								local storage file path to the file							
+								
+							</td>
+						</tr>
+									
+					</table>
+				
+				
+				
+				
+							
+				
+			</div>
+		
+			<div x-ww-support="bb5.0|bb6.0">
+				<h2><a name=".getFileProperties"></a>
+				    blackberry.io.file.getFileProperties
+				</h2>
+				<hr style="margin-bottom:15px;"/>
+				
+				<table class="scriptTable">
+					<tr>
+						<td class="scriptTd">
+						static				
+						FileProperties
+						
+							getFileProperties(path : String)
+													
+						</td>
+					</tr>
+				</table>
+				<br/>
+				
+							
+				
+								
+					<div class="title">Supported Platform(s)</div>		
+					
+						&nbsp;- BlackBerry OS 5.0+<br/>
+									
+				
+				
+				<br/>
+				<div class="title">Description</div>
+				&nbsp;Get the FileProperties object for a given file.
+				
+				
+					<br/><br/>
+					<div class="title">Returns</div>
+					
+						
+					
+				
+				
+				
+					<br/><br/>
+					<table class="confluenceTable">
+						<tr>
+						<th class="confluenceTh">
+						   Parameter
+						   
+						</th>
+						<th class="confluenceTh">
+						   Type
+						   
+						</th>
+						<th class="confluenceTh">
+						   Description
+						   
+						</th>
+						</tr>
+									
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>path</b></td>
+							<td class="confluenceTd">
+								
+									String
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								local storage file path to the file							
+								
+							</td>
+						</tr>
+									
+					</table>
+				
+				
+				
+				
+							
+				
+			</div>
+		
+			<div x-ww-support="bb5.0|bb6.0">
+				<h2><a name=".open"></a>
+				    blackberry.io.file.open
+				</h2>
+				<hr style="margin-bottom:15px;"/>
+				
+				<table class="scriptTable">
+					<tr>
+						<td class="scriptTd">
+						static				
+						Boolean
+						
+							open(path : String)
+													
+						</td>
+					</tr>
+				</table>
+				<br/>
+				
+							
+				
+								
+					<div class="title">Supported Platform(s)</div>		
+					
+						&nbsp;- BlackBerry OS 5.0+<br/>
+									
+				
+				
+				<br/>
+				<div class="title">Description</div>
+				&nbsp;Open the specified file with the registered content handler.
+				
+				
+					<br/><br/>
+					<div class="title">Returns</div>
+					
+						
+					
+				
+				
+				
+					<br/><br/>
+					<table class="confluenceTable">
+						<tr>
+						<th class="confluenceTh">
+						   Parameter
+						   
+						</th>
+						<th class="confluenceTh">
+						   Type
+						   
+						</th>
+						<th class="confluenceTh">
+						   Description
+						   
+						</th>
+						</tr>
+									
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>path</b></td>
+							<td class="confluenceTd">
+								
+									String
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								file path to the file to be opened.							
+								
+							</td>
+						</tr>
+									
+					</table>
+				
+				
+				
+				
+							
+				
+			</div>
+		
+			<div x-ww-support="bb5.0|bb6.0">
+				<h2><a name=".readFile"></a>
+				    blackberry.io.file.readFile
+				</h2>
+				<hr style="margin-bottom:15px;"/>
+				
+				<table class="scriptTable">
+					<tr>
+						<td class="scriptTd">
+						static				
+						void
+						
+							readFile(path : String, onFileOpened : function, <i>[async: Boolean]</i>)
+													
+						</td>
+					</tr>
+				</table>
+				<br/>
+				
+							
+				
+								
+					<div class="title">Supported Platform(s)</div>		
+					
+						&nbsp;- BlackBerry OS 5.0+<br/>
+									
+				
+				
+				<br/>
+				<div class="title">Description</div>
+				&nbsp;Reads in a file from the local file system.
+				
+				
+					<br/><br/>
+					<div class="title">Returns</div>
+					
+						
+					
+				
+				
+				
+					<br/><br/>
+					<table class="confluenceTable">
+						<tr>
+						<th class="confluenceTh">
+						   Parameter
+						   
+						</th>
+						<th class="confluenceTh">
+						   Type
+						   
+						</th>
+						<th class="confluenceTh">
+						   Description
+						   
+						</th>
+						</tr>
+									
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>path</b></td>
+							<td class="confluenceTd">
+								
+									String
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								local storage file path to the file to be opened into a Blob							
+								
+							</td>
+						</tr>
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>onFileOpened</b></td>
+							<td class="confluenceTd">
+								
+									function(fullPath : String, blobData : Blob)
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								Javascript function to call on completion of loading the file from the file system.							
+								
+									<br/>
+									
+										<br/>
+										<b>fullPath:</b> Full path of the file that was just opened
+									
+										<br/>
+										<b>blobData:</b> Blob that contains the file&apos;s contents
+									
+								
+							</td>
+						</tr>
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>async</b></td>
+							<td class="confluenceTd">
+								
+									Boolean
+								
+								<br/><i>Optional</i>													
+							</td>
+							<td class="confluenceTd">
+								
+								an optional parameter specifying if the call to read should be asynchronous or synchronous.  If this parameter is not supplied the default of true- you async true? - will be used.							
+								
+							</td>
+						</tr>
+									
+					</table>
+				
+				
+				
+				
+							
+				
+			</div>
+		
+			<div x-ww-support="bb5.0|bb6.0">
+				<h2><a name=".rename"></a>
+				    blackberry.io.file.rename
+				</h2>
+				<hr style="margin-bottom:15px;"/>
+				
+				<table class="scriptTable">
+					<tr>
+						<td class="scriptTd">
+						static				
+						void
+						
+							rename(path : String, newFileName : String)
+													
+						</td>
+					</tr>
+				</table>
+				<br/>
+				
+							
+				
+								
+					<div class="title">Supported Platform(s)</div>		
+					
+						&nbsp;- BlackBerry OS 5.0+<br/>
+									
+				
+				
+				<br/>
+				<div class="title">Description</div>
+				&nbsp;Rename a given file.
+				
+				
+					<br/><br/>
+					<div class="title">Returns</div>
+					
+						
+					
+				
+				
+				
+					<br/><br/>
+					<table class="confluenceTable">
+						<tr>
+						<th class="confluenceTh">
+						   Parameter
+						   
+						</th>
+						<th class="confluenceTh">
+						   Type
+						   
+						</th>
+						<th class="confluenceTh">
+						   Description
+						   
+						</th>
+						</tr>
+									
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>path</b></td>
+							<td class="confluenceTd">
+								
+									String
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								local storage file path to the file							
+								
+							</td>
+						</tr>
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>newFileName</b></td>
+							<td class="confluenceTd">
+								
+									String
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								the new file name.							
+								
+							</td>
+						</tr>
+									
+					</table>
+				
+				
+				
+				
+							
+				
+			</div>
+		
+			<div x-ww-support="bb5.0|bb6.0">
+				<h2><a name=".saveFile"></a>
+				    blackberry.io.file.saveFile
+				</h2>
+				<hr style="margin-bottom:15px;"/>
+				
+				<table class="scriptTable">
+					<tr>
+						<td class="scriptTd">
+						static				
+						void
+						
+							saveFile(path : String, data : Blob)
+													
+						</td>
+					</tr>
+				</table>
+				<br/>
+				
+							
+				
+								
+					<div class="title">Supported Platform(s)</div>		
+					
+						&nbsp;- BlackBerry OS 5.0+<br/>
+									
+				
+				
+				<br/>
+				<div class="title">Description</div>
+				&nbsp;Save a Blob to the local file system.
+				
+				
+					<br/><br/>
+					<div class="title">Returns</div>
+					
+						
+					
+				
+				
+				
+					<br/><br/>
+					<table class="confluenceTable">
+						<tr>
+						<th class="confluenceTh">
+						   Parameter
+						   
+						</th>
+						<th class="confluenceTh">
+						   Type
+						   
+						</th>
+						<th class="confluenceTh">
+						   Description
+						   
+						</th>
+						</tr>
+									
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>path</b></td>
+							<td class="confluenceTd">
+								
+									String
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								Local storage file path to the file that is going to store the data							
+								
+							</td>
+						</tr>
+					
+						
+						<tr>
+							<td class="confluenceTd"><b>data</b></td>
+							<td class="confluenceTd">
+								
+									Blob
+								
+																					
+							</td>
+							<td class="confluenceTd">
+								
+								The Blob to be saved.							
+								
+							</td>
+						</tr>
+									
+					</table>
+				
+				
+				
+				
+							
+				
+			</div>
+		
+	
+			
+<!-- ============================== Event details ========================= -->		
+	
+<!-- ============================== properties details ========================== -->		
+	
+	
+<!-- ============================== constant details ========================== -->		
+	
+
+<!-- ============================== URI  ==================== -->			
+			
+				
+	
+	
+	
+		<div x-ww-support="bb5.0|bb6.0">
+			<h2><a name=".file"> </a>Code Example(s)</h2>
+			<hr style="margin-bottom:15px;"/>
+			
+			<table class="scriptTable">				
+				<tr><td class="scriptTd">
+				<pre>&lt;script type=&quot;text&sol;javascript&quot;&gt;  var xmlString = &quot;&lt;test&gt;IO functions&lt;&sol;test&gt;&quot;;  var filePath = &quot;file:&sol;&sol;&sol;store&sol;home&sol;user&sol;sample.xml&quot;;  var parser = new DOMParser();  var doc = parser.parseFromString(xmlString, &quot;text&sol;xml&quot;);  var blob_data = blackberry.utils.documentToBlob(doc);       blackberry.io.file.saveFile(filePath, blob_data);                  if (blackberry.io.file.exists(filePath)) {    blackberry.io.file.copy(filePath, &quot;file:&sol;&sol;&sol;SDCard&sol;myxmlfile2.xml&quot;);    blackberry.io.file.readFile(filePath,handleOpenedFile);  }       function handleOpenedFile(fullPath, blobData) {    alert(&quot;file opened was: &quot; + fullPath + &quot; which contained &quot; + blobData.length + &quot; bytes&quot;);  }&lt;&sol;script&gt;</pre>
+				</td></tr>				
+			</table>
+			
+		</div>
+	
+	
+	      	  	
+<!-- ============================== footer ================================= -->
+	<hr style="margin-bottom:15px;"/>
+	<div class="fineprint" style="clear:both">
+		
+		Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Jul 06 2011 21:05:00 GMT-0400 (EDT)
+	</div>
+	</body>
+</html>
