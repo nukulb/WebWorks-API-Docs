@@ -36,16 +36,125 @@
  * &lt;/script&gt;
  */
 blackberry.invoke = {
-                
+		
 		/**
-
-		 * @description Invokes another application on the BlackBerry Playbook.
+		 * @name blackberry.invoke.invoke^4
+		 * @function
+		 * @description Invokes an application.
 		 * @param {Number} appType an integer value representing the type of application to launch. Must be one of the 'APP_*' constants.
 		 * @param {Object} [args] An arguments object specifying information for the application being invoked.
 		 * @throws {Exception} If values supplied are not correct. 
 		 * @BB50+
 		 * @PB10
 		 */
+		 /**
+		 * @name blackberry.invoke.invoke^3	
+		 * @description Invokes the Camera application on the BlackBerry.
+		 * @param {String} appType is a string value that represents the type of application to launch. Must be 'camera' for Camera.
+		 * @BB50+
+		 * @uri
+		 * @function
+		 * @example 
+		 * &lt;html&gt;
+		 * &lt;head&gt;
+		 *     &lt;script type="text/javascript" src="js/jquery-1.4.2.js" &gt;&lt;/script&gt; 
+		 *     &lt;script type="text/javascript"&gt;
+		 *          function invokeCamera(){
+		 *              $.ajax({
+		 *                  type: "post",
+		 *                  url: "http://webworks/blackberry/invoke/invoke?appType=camera"
+		 *               });
+		 *           }
+		 *      &lt;/script&gt;    
+		 *&lt;/head&gt;
+		 *&lt;body&gt;
+		 *    &lt;input type="button" onclick="invokeCamera();" value="Invoke Camera"/&gt; 		 
+		 *&lt;/body&gt;
+		 *&lt;/html&gt;
+		 *
+		 */ 
+		/**
+		 * @name blackberry.invoke.invoke^2	
+		 * @description Invokes the Search application on the BlackBerry.
+		 * @param {String} appType is a string value that represents the type of application to launch. Must be 'search' for Search.
+		 * @param {String} [args.text] The text string to pass to the Search application 
+		 * @param {String} [args.name] The name string to pass to the Search application 
+		 * @BB50+
+		 * @uri
+		 * @function
+		 * @example 
+		 * &lt;html&gt;
+		 * &lt;head&gt;
+		 *     &lt;script type="text/javascript" src="js/jquery-1.4.2.js" &gt;&lt;/script&gt; 
+		 *     &lt;script type="text/javascript"&gt;
+		 *          function invokeSearch(){
+		 *              $.ajax({
+		 *                  type: "post",
+		 *                  url: "http://webworks/blackberry/invoke/invoke?appType=search&args.text=build&args.name=Tim"
+		 *               });
+		 *           }
+		 *      &lt;/script&gt;    
+		 *&lt;/head&gt;
+		 *&lt;body&gt;
+		 *    &lt;input type="button" onclick="invokeSearch();" value="Invoke Search"/&gt; 		 
+		 *&lt;/body&gt;
+		 *&lt;/html&gt;
+		 *
+		 */ 
+		 		/**
+		 * @name blackberry.invoke.invoke^1	
+		 * @description Invokes the Video Camera application on the BlackBerry.
+		 * @param {String} appType is a string value that represents the type of application to launch. Must be 'camera' for Camera.
+		 * @BB50+
+		 * @uri
+		 * @function
+		 * @example 
+		 * &lt;html&gt;
+		 * &lt;head&gt;
+		 *     &lt;script type="text/javascript" src="js/jquery-1.4.2.js" &gt;&lt;/script&gt; 
+		 *     &lt;script type="text/javascript"&gt;
+		 *          function invokeVideoCamera(){
+		 *              $.ajax({
+		 *                  type: "post",
+		 *                  url: "http://webworks/blackberry/invoke/invoke?appType=videocamera"
+		 *               });
+		 *           }
+		 *      &lt;/script&gt;    
+		 *&lt;/head&gt;
+		 *&lt;body&gt;
+		 *    &lt;input type="button" onclick="invokeVideoCamera();" value="Invoke Video Camera"/&gt; 		 
+		 *&lt;/body&gt;
+		 *&lt;/html&gt;
+		 *
+		 */ 
+		 /**
+		 * @name blackberry.invoke.invoke
+		 * @description Invokes a Java application on the BlackBerry Playbook.
+		 * @param {String} appType is a string value that represents the type of application to launch. Must be 'java' for Java Applications.
+		 * @param {String} args.uri URL which can be in any form and is passed in the arguments to main. The uri can be in the format: 'appName', 'appName.entryPoint' or 'appName[.entryPoint]?arg1=val&arg2=val'.
+		 * @param {String} [args.params] String array that contains additional parameters. Each entry in the params array should be in a name value pair such as 'arg1=val1'.
+		 * @BB50+
+		 * @uri
+		 * @function
+		 * @example 
+		 * &lt;html&gt;
+		 * &lt;head&gt;
+		 *     &lt;script type="text/javascript" src="js/jquery-1.4.2.js" &gt;&lt;/script&gt; 
+		 *     &lt;script type="text/javascript"&gt;
+		 *          function invokeJava(){
+		 *              $.ajax({
+		 *                  type: "post",
+		 *                  url: "http://webworks/blackberry/invoke/invoke?appType=java&args.uri=net_rim_bb_memo_app"
+		 *               });
+		 *           }
+		 *      &lt;/script&gt;    
+		 *&lt;/head&gt;
+		 *&lt;body&gt;
+		 *    &lt;input type="button" onclick="invokeJava();" value="Invoke Java App"/&gt; 		 
+		 *&lt;/body&gt;
+		 *&lt;/html&gt;
+		 *
+		 */ 
 		invoke : function(appType, args){},
 		
 		/**
@@ -196,4 +305,6 @@ blackberry.invoke = {
 		 * @description App World Application.
 		 */
 		APP_APPWORLD : 16
+		
 }
+
