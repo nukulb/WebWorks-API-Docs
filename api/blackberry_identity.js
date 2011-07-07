@@ -82,7 +82,7 @@ blackberry.identity = {
      *		    type: "get",
      *		    url: "webworks://blackberry/identity/get",
      *		    success: function(msg){
-     *		      $('#myIdentityDiv').populate(JSON.parse(msg).data.PIN);
+     *		      $('#myIdentityDiv').populate(JSON.parse(msg).data);
      *		    }
      *		});
      *	}
