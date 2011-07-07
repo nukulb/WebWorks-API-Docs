@@ -928,13 +928,13 @@
                                 
                                     <tr>
                                         <td class="confluenceTd">
-                                            <b>callback</b>
+                                            <b>monitor</b>
                                         </td>
                                         <td class="confluenceTd">
-                                            String
+                                            Boolean
                                             
                                         </td>
-                                        <td class="confluenceTd">Name of the callback function or "null" to stop getting notification for coverage changes</td>
+                                        <td class="confluenceTd">Flag to indicate whether the caller wants to get notifications for coverage status changes or not. Pass true to start monitoring, or false to stop monitoring.</td>
                                     </tr>
                                                               
                             </table>
@@ -948,7 +948,7 @@
                             <table class="scriptTable">
                                 
                                     <tr><td class="scriptTd">
-                                        <pre>{  "data" : {    "callback" : "&lt;callback that was passed&gt;"  }}</pre>
+                                        <pre>{  "data" : {    "monitor" : "&lt;the flag that was passed&gt;"  }}</pre>
                                     </td></tr>
                                 
                             </table>
@@ -1008,13 +1008,13 @@
                                 
                                     <tr>
                                         <td class="confluenceTd">
-                                            <b>callback</b>
+                                            <b>monitor</b>
                                         </td>
                                         <td class="confluenceTd">
-                                            String
+                                            Boolean
                                             
                                         </td>
-                                        <td class="confluenceTd">Name of the callback function or "null" to stop getting notification for clicks to the key</td>
+                                        <td class="confluenceTd">Flag to indicate whether the caller wants to get notifications for clicks to the hardware buttons or not. Pass true to start monitoring, or false to stop monitoring.</td>
                                     </tr>
                                                               
                             </table>
@@ -1028,7 +1028,7 @@
                             <table class="scriptTable">
                                 
                                     <tr><td class="scriptTd">
-                                        <pre>{  "data" : {    "key" : "&lt;key that was passed&gt;",    "callback" : "&lt;callback that was passed&gt;"  }}</pre>
+                                        <pre>{  "data" : {    "key" : "&lt;key that was passed&gt;",    "monitor" : "&lt;the flag that was passed&gt;"  }}</pre>
                                     </td></tr>
                                 
                             </table>
@@ -1060,7 +1060,7 @@
                 
                     <table class="scriptTable">             
                         <tr><td class="scriptTd">
-                            <pre>&lt;html&gt;&lt;head&gt;&lt;script type="text/javascript" src="jquery.min.js"&gt;&lt;/script&gt;&lt;script type="text/javascript"&gt;$.support.cors = true; // this is needed in BB5.0 for jQuery to support cross-domain requestfunction asyncCall(method, args, callback) {  $.ajax({     url : "http://webworks/blackberry/system/event/" + method,     data : args,     method : "GET",     success : callback,     async : true,     error : function(jqXHR, textStatus, errorThrown) {       alert('error:' + textStatus + ' errorThrown:' + errorThrown);     }  });}function poll(method, args, callback) {  asyncCall(method, args, function(response) {    if (callback(response)) {      poll(method, args, callback);    }  });}function getCallback(callback) {  return function(response) {    var result = JSON.parse(response);    if (result.code < 0) {       return false;    }    if (callback) {       callback();    }    return !!callback;  };}function coverageChanged() {  $("#status").html((new Date()).toLocaleString() + " coverage changed!");}function volumeUpKeyPressed() {  $("#status").html((new Date()).toLocaleString() + " volume up key pressed!");}&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;input type="button" id="setCoverageChange" value="Listen coverage change"&gt;&lt;br&gt;&lt;br&gt;&lt;input type="button" id="unsetCoverageChange" value="Stop listen coverage change"&gt;&lt;br&gt;&lt;br&gt;&lt;input type="button" id="setVolumeUp" value="Listen volume up key press"&gt;&lt;br&gt;&lt;br&gt;&lt;input type="button" id="unsetVolumeUp" value="Stop listen volume up key press"&gt;&lt;br&gt;&lt;br&gt;&lt;div id="status"&gt;&lt;/div&gt;&lt;script type="text/javascript"&gt;$("#setCoverageChange").click(function() {  var callback = coverageChanged;  poll("onCoverageChange", { "callback" : callback.name }, getCallback(callback));});$("#unsetCoverageChange").click(function(){  var callback = null;  poll("onCoverageChange", { "callback" : callback }, getCallback(callback));});$("#setVolumeUp").click(function() {  var callback = volumeUpKeyPressed;  poll("onHardwareKey", { "key" : blackberry.system.event.KEY_VOLUMEUP, "callback" : callback.name }, getCallback(callback));});$("#unsetVolumeUp").click(function(){  var callback = null;  poll("onHardwareKey", { "key" : blackberry.system.event.KEY_VOLUMEUP, "callback" : callback }, getCallback(callback));});&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+                            <pre>&lt;html&gt;&lt;head&gt;&lt;script type="text/javascript" src="jquery.min.js"&gt;&lt;/script&gt;&lt;script type="text/javascript"&gt;$.support.cors = true; // this is needed in BB5.0 for jQuery to support cross-domain requestfunction asyncCall(method, args, callback) {  $.ajax({     url : "http://webworks/blackberry/system/event/" + method,     data : args,     method : "GET",     success : callback,     async : true,     error : function(jqXHR, textStatus, errorThrown) {       alert('error:' + textStatus + ' errorThrown:' + errorThrown);     }  });}function poll(method, args, callback) {  asyncCall(method, args, function(response) {    if (callback(response)) {      poll(method, args, callback);    }  });}function getCallback(callback) {  return function(response) {    var result = JSON.parse(response);    if (result.code < 0) {       return false;    }    if (callback) {       callback();    }    return !!callback;  };}function coverageChanged() {  $("#status").html((new Date()).toLocaleString() + " coverage changed!");}function volumeUpKeyPressed() {  $("#status").html((new Date()).toLocaleString() + " volume up key pressed!");}&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;input type="button" id="setCoverageChange" value="Listen coverage change"&gt;&lt;br&gt;&lt;br&gt;&lt;input type="button" id="unsetCoverageChange" value="Stop listen coverage change"&gt;&lt;br&gt;&lt;br&gt;&lt;input type="button" id="setVolumeUp" value="Listen volume up key press"&gt;&lt;br&gt;&lt;br&gt;&lt;input type="button" id="unsetVolumeUp" value="Stop listen volume up key press"&gt;&lt;br&gt;&lt;br&gt;&lt;div id="status"&gt;&lt;/div&gt;&lt;script type="text/javascript"&gt;$("#setCoverageChange").click(function() {  var callback = coverageChanged;  poll("onCoverageChange", { "monitor" : true }, getCallback(callback));});$("#unsetCoverageChange").click(function(){  var callback = null;  poll("onCoverageChange", { "monitor" : false }, getCallback(callback));});$("#setVolumeUp").click(function() {  var callback = volumeUpKeyPressed;  poll("onHardwareKey", { "key" : blackberry.system.event.KEY_VOLUMEUP, "monitor" : true }, getCallback(callback));});$("#unsetVolumeUp").click(function(){  var callback = null;  poll("onHardwareKey", { "key" : blackberry.system.event.KEY_VOLUMEUP, "monitor" : false }, getCallback(callback));});&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</pre>
                         </td></tr>              
                     </table>
                 
@@ -1072,7 +1072,7 @@
         <hr style="margin-bottom: 15px;"/>
         <div class="fineprint" style="clear: both">
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 07 2011 10:03:17 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 07 2011 11:03:17 GMT-0400 (EDT)
         </div>
         
     </div></body>
