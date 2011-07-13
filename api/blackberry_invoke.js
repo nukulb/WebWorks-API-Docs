@@ -38,7 +38,7 @@
 blackberry.invoke = {
 		
 		/**
-		 * @name blackberry.invoke.invoke^4
+		 * @name blackberry.invoke.invoke^6
 		 * @function
 		 * @description Invokes an application.
 		 * @param {Number} appType an integer value representing the type of application to launch. Must be one of the 'APP_*' constants.
@@ -47,6 +47,64 @@ blackberry.invoke = {
 		 * @BB50+
 		 * @PB10
 		 */
+		 /**
+		 * @name blackberry.invoke.invoke^5	
+		 * @description Invokes the Browser application on the BlackBerry.
+		 * @param {String} appType is a string value that represents the type of application to launch. For browser, the appType is the URL that needs to be invoked
+		 * @param (String) [args.transport.uid]  an optional parameter for BB5.0+ only representing the transport type that the browser should use. If no parameter is specified the default browser configured for the device will be used.
+		 * @BB50+
+		 * @uri
+		 * @function
+		 * @example 
+		 * &lt;html&gt;
+		 * &lt;head&gt;
+		 *     &lt;script type="text/javascript" src="js/jquery-1.4.2.js" &gt;&lt;/script&gt; 
+		 *     &lt;script type="text/javascript"&gt;
+		 *          function invokeBrowser(){
+		 *              $.ajax({
+		 *                  type: "post",
+		 *                  url: "http://webworks/blackberry/invoke/invoke?appType=http://www.blackberry.com"
+		 *               });
+		 *           }
+		 *      &lt;/script&gt;    
+		 *&lt;/head&gt;
+		 *&lt;body&gt;
+		 *    &lt;input type="button" onclick="invokebBrowser();" value="Invoke Camera"/&gt; 		 
+		 *&lt;/body&gt;
+		 *&lt;/html&gt;
+		 *
+		 */ 
+		 /**
+		 * @name blackberry.invoke.invoke^4	
+		 * @description Invokes the Message application on the BlackBerry.
+		 * @param {String} appType is a string value that represents the type of application to launch. Must be 'message' for Message.
+		 * @param {String} view Value that specifies what kind of view you want to view in Messages application. If MessageArguments object is created with a Message object or 'to','subject','body' values, the view is 'VIEW_NEW' regardless if any other value is assigned. 
+		 * @param {String} [args.to] The recipient's email address 
+		 * @param {String} [args.subject] The message's subject line 
+		 * @param {String} [args.body] The contents of the message 
+		 * @param {String} [args.message] Stringified blackberry.message.Message JSON Object
+		 * @BB50+
+		 * @uri
+		 * @function
+		 * @example 
+		 * &lt;html&gt;
+		 * &lt;head&gt;
+		 *     &lt;script type="text/javascript" src="js/jquery-1.4.2.js" &gt;&lt;/script&gt; 
+		 *     &lt;script type="text/javascript"&gt;
+		 *          function invokeCamera(){
+		 *              $.ajax({
+		 *                  type: "post",
+		 *                  url: "http://webworks/blackberry/invoke/invoke?appType=messages&args.view=0&args.to=foo@domain.com&args.subject=hello&args.body=world"
+		 *               });
+		 *           }
+		 *      &lt;/script&gt;    
+		 *&lt;/head&gt;
+		 *&lt;body&gt;
+		 *    &lt;input type="button" onclick="invokeCamera();" value="Invoke Camera"/&gt; 		 
+		 *&lt;/body&gt;
+		 *&lt;/html&gt;
+		 *
+		 */ 
 		 /**
 		 * @name blackberry.invoke.invoke^3	
 		 * @description Invokes the Camera application on the BlackBerry.
