@@ -180,7 +180,7 @@
                                 
                                     <tr x-ww-support="bb5.0|bb6.0|pb1.0|common">
                                         <td class="apiTd">
-                                            <a href="blackberry.invoke.html#.invoke^4">blackberry.invoke.invoke</a>                               
+                                            <a href="blackberry.invoke.html#.invoke^6">blackberry.invoke.invoke</a>                               
                                             <td class="apiTd apiYes">Y</td>
 <td class="apiTd apiYes">Y</td>
 <td class="apiTd apiYes">Y</td>
@@ -217,6 +217,24 @@
                                     <tr x-ww-support="bb5.0|bb6.0">
                                         <td class="apiTd">
                                             <a href="blackberry.invoke.html#.invoke^3">http://webworks/blackberry/invoke/invoke^3</a>                               
+                                            <td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+                                        </td>
+                                    </tr>                               
+                                
+                                    <tr x-ww-support="bb5.0|bb6.0">
+                                        <td class="apiTd">
+                                            <a href="blackberry.invoke.html#.invoke^4">http://webworks/blackberry/invoke/invoke^4</a>                               
+                                            <td class="apiTd apiYes">Y</td>
+<td class="apiTd apiYes">Y</td>
+<td class="apiTd apiNo">&nbsp;</td>
+                                        </td>
+                                    </tr>                               
+                                
+                                    <tr x-ww-support="bb5.0|bb6.0">
+                                        <td class="apiTd">
+                                            <a href="blackberry.invoke.html#.invoke^5">http://webworks/blackberry/invoke/invoke^5</a>                               
                                             <td class="apiTd apiYes">Y</td>
 <td class="apiTd apiYes">Y</td>
 <td class="apiTd apiNo">&nbsp;</td>
@@ -469,7 +487,7 @@
                 <ul class="ulNoTopMargin">          
                     
                         <li x-ww-support="bb5.0|bb6.0|pb1.0|common">
-                            <a href="blackberry.invoke.html#.invoke^4">blackberry.invoke.invoke</a>
+                            <a href="blackberry.invoke.html#.invoke^6">blackberry.invoke.invoke</a>
                             
                         </li>               
                     
@@ -644,6 +662,16 @@
                             
                         </li>               
                     
+                        <li x-ww-support="bb5.0|bb6.0">
+                            <a href="blackberry.invoke.html#.invoke^4">http://webworks/blackberry/invoke/invoke^4</a>
+                            
+                        </li>               
+                    
+                        <li x-ww-support="bb5.0|bb6.0">
+                            <a href="blackberry.invoke.html#.invoke^5">http://webworks/blackberry/invoke/invoke^5</a>
+                            
+                        </li>               
+                    
                 </ul>   
                
     
@@ -663,7 +691,7 @@
         
             
                 <div x-ww-support="bb5.0|bb6.0|pb1.0|common">
-                    <h2><a name=".invoke^4"></a>
+                    <h2><a name=".invoke^6"></a>
                         blackberry.invoke.invoke
                     </h2>
                     <hr style="margin-bottom: 15px;"/>
@@ -1526,6 +1554,210 @@
                         
                     </div>
                 
+                    <div x-ww-support="bb5.0|bb6.0">
+                        <h2><a name=".invoke^4"> </a>http://webworks/blackberry/invoke/invoke^4</h2>
+                        <hr style="margin-bottom: 15px;"/>
+                        
+                        <div class="title">Description</div>
+                            &nbsp;Invokes the Message application on the BlackBerry.
+                        <br/>
+                        
+                                       
+                        
+                        
+                            <br/>
+                            <div class="title">Supported Platform(s)</div>      
+                            
+                                &nbsp;- BlackBerry OS 5.0+
+                                <br/>
+                                              
+                        
+                        
+                        
+                            <br/>
+                            <table class="confluenceTable">
+                                <tr>
+                                    <th class="confluenceTh">
+                                       Parameter
+                                       
+                                    </th>
+                                    <th class="confluenceTh">
+                                       Type
+                                       
+                                    </th>
+                                    <th class="confluenceTh">
+                                       Description
+                                       
+                                    </th>
+                                </tr>
+                                
+                                    <tr>
+                                        <td class="confluenceTd">
+                                            <b>appType</b>
+                                        </td>
+                                        <td class="confluenceTd">
+                                            String
+                                            
+                                        </td>
+                                        <td class="confluenceTd">is a string value that represents the type of application to launch. Must be 'message' for Message.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td class="confluenceTd">
+                                            <b>view</b>
+                                        </td>
+                                        <td class="confluenceTd">
+                                            String
+                                            
+                                        </td>
+                                        <td class="confluenceTd">Value that specifies what kind of view you want to view in Messages application. If MessageArguments object is created with a Message object or 'to','subject','body' values, the view is 'VIEW_NEW' regardless if any other value is assigned.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td class="confluenceTd">
+                                            <b>args.to</b>
+                                        </td>
+                                        <td class="confluenceTd">
+                                            String
+                                            <i>Optional</i>
+                                        </td>
+                                        <td class="confluenceTd">The recipient's email address</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td class="confluenceTd">
+                                            <b>args.subject</b>
+                                        </td>
+                                        <td class="confluenceTd">
+                                            String
+                                            <i>Optional</i>
+                                        </td>
+                                        <td class="confluenceTd">The message's subject line</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td class="confluenceTd">
+                                            <b>args.body</b>
+                                        </td>
+                                        <td class="confluenceTd">
+                                            String
+                                            <i>Optional</i>
+                                        </td>
+                                        <td class="confluenceTd">The contents of the message</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td class="confluenceTd">
+                                            <b>args.message</b>
+                                        </td>
+                                        <td class="confluenceTd">
+                                            String
+                                            <i>Optional</i>
+                                        </td>
+                                        <td class="confluenceTd">Stringified blackberry.message.Message JSON Object</td>
+                                    </tr>
+                                                              
+                            </table>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <br/>
+                            <div class="title">Code Example(s)</div>
+                            <table class="scriptTable">
+                                
+                                    <tr><td class="scriptTd">
+                                        <pre>&lt;html&gt;&lt;head&gt;    &lt;script type="text/javascript" src="js/jquery-1.4.2.js" &gt;&lt;/script&gt;     &lt;script type="text/javascript"&gt;         function invokeCamera(){             $.ajax({                 type: "post",                 url: "http://webworks/blackberry/invoke/invoke?appType=messages&args.view=0&args.to=foo@domain.com&args.subject=hello&args.body=world"              });          }     &lt;/script&gt;    &lt;/head&gt;&lt;body&gt;   &lt;input type="button" onclick="invokeCamera();" value="Invoke Camera"/&gt; 		 &lt;/body&gt;&lt;/html&gt;</pre>
+                                    </td></tr>
+                                
+                            </table>                                
+                        
+                    </div>
+                
+                    <div x-ww-support="bb5.0|bb6.0">
+                        <h2><a name=".invoke^5"> </a>http://webworks/blackberry/invoke/invoke^5</h2>
+                        <hr style="margin-bottom: 15px;"/>
+                        
+                        <div class="title">Description</div>
+                            &nbsp;Invokes the Browser application on the BlackBerry.
+                        <br/>
+                        
+                                       
+                        
+                        
+                            <br/>
+                            <div class="title">Supported Platform(s)</div>      
+                            
+                                &nbsp;- BlackBerry OS 5.0+
+                                <br/>
+                                              
+                        
+                        
+                        
+                            <br/>
+                            <table class="confluenceTable">
+                                <tr>
+                                    <th class="confluenceTh">
+                                       Parameter
+                                       
+                                    </th>
+                                    <th class="confluenceTh">
+                                       Type
+                                       
+                                    </th>
+                                    <th class="confluenceTh">
+                                       Description
+                                       
+                                    </th>
+                                </tr>
+                                
+                                    <tr>
+                                        <td class="confluenceTd">
+                                            <b>appType</b>
+                                        </td>
+                                        <td class="confluenceTd">
+                                            String
+                                            
+                                        </td>
+                                        <td class="confluenceTd">is a string value that represents the type of application to launch. For browser, the appType is the URL that needs to be invoked</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td class="confluenceTd">
+                                            <b>(String)</b>
+                                        </td>
+                                        <td class="confluenceTd">
+                                            
+                                            
+                                        </td>
+                                        <td class="confluenceTd">[args.transport.uid]  an optional parameter for BB5.0+ only representing the transport type that the browser should use. If no parameter is specified the default browser configured for the device will be used.</td>
+                                    </tr>
+                                                              
+                            </table>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <br/>
+                            <div class="title">Code Example(s)</div>
+                            <table class="scriptTable">
+                                
+                                    <tr><td class="scriptTd">
+                                        <pre>&lt;html&gt;&lt;head&gt;    &lt;script type="text/javascript" src="js/jquery-1.4.2.js" &gt;&lt;/script&gt;     &lt;script type="text/javascript"&gt;         function invokeBrowser(){             $.ajax({                 type: "post",                 url: "http://webworks/blackberry/invoke/invoke?appType=http://www.blackberry.com"              });          }     &lt;/script&gt;    &lt;/head&gt;&lt;body&gt;   &lt;input type="button" onclick="invokebBrowser();" value="Invoke Camera"/&gt; 		 &lt;/body&gt;&lt;/html&gt;</pre>
+                                    </td></tr>
+                                
+                            </table>                                
+                        
+                    </div>
+                
                    
         
         
@@ -1548,7 +1780,7 @@
         <hr style="margin-bottom: 15px;"/>
         <div class="fineprint" style="clear: both">
             
-            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Jul 11 2011 11:12:18 GMT-0400 (EDT)
+            Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Jul 14 2011 06:03:43 GMT-0400 (EDT)
         </div>
         
     </div></body>
