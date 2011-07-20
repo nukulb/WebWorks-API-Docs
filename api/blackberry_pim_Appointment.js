@@ -98,7 +98,66 @@ blackberry.pim.Appointment.OUT_OF_OFFICE = 3;
 * @returns {Appointment[]}
 * @BB50+
 */
+/**
+ * Looks up the appointments that match the regular expression provided. 
+ * @param {String} [filter] optional FilterExpression that defines the search criteria for the find, specified in JSON.  If no value is provided, the method will return all the appointments on the device.
+ * @param {String} [orderBy] optional &apos;orderBy&apos; parameter specifying the field which the results will be sorted by. If &apos;isAscending&apos; is not supplied or &apos;isAscending&apos; is true, the sort results will be in an ascending order. If &apos;isAscending&apos; is false, the sort results will be in a descending order.
+ * @param {Number} [maxReturn] optional integer parameter specifying the maximum number of results to return from the find.  If not supplied or set to -1, it will return all results found.
+ * @param {String} [service] optional parameter to define which service you wish to search for your appointments. If not provided the default service for appointments will be used.
+ * @param {Boolean} [isAscending] optional &apos;isAscending&apos; parameter specifying whether the sort order is ascending or descending. If not supplied or set to true, the results sorted by the field specified by &apos;orderBy&apos; will be in an ascending order. If set to false, the sort results will be in a descending order. If no &apos;orderBy&apos; value is specified, &apos;isAscending&apos; is neglected.
+ * @returns {Object Literal}
+ * {
+ *   "data" : {
+ *     "filter" : "&lt;FilterExpression JSON that was passed&gt;",
+ *     "orderBy" : "&lt;field name that was passed&gt;",
+ *     "maxReturn" : &lt;maximum number of results that was passed&gt;,
+ *     "service" : "&lt;service name that was passed&gt;",
+ *     "isAscending" : &lt;isAscending flag that was passed&gt;,
+ *     "items" : &lt;array of Appointment objects that satisfy the search criteria&gt;
+ *   }
+ * }
+ * @BB50+
+ * @uri
+ * @function
+ */
 blackberry.pim.Appointment.find = function(filter,orderBy,maxReturn,service,isAscending) { };
+
+
+/**
+ * Saves an appointment
+ * @param {String} appointment The appointment object to be saved in JSON
+ * @param {String} [service] Optional parameter specifying which service this appointment is for. If not provided, the default device service is used.
+ * @param {String} [uid] If the appointment is being saved for the first time, the uid can be left empty; otherwise, the uid should be specified
+ * @returns {Object Literal}
+ * {
+ *   "data" : {
+ *     "appointment" : "&lt;appointment JSON that was passed&gt;",
+ *     "service" : "&lt;service name that was passed&gt;",
+ *     "uid" : "&lt;uid that was passed&gt;"
+ *   }
+ * }
+ * @BB50+
+ * @uri
+ * @function
+ */
+blackberry.pim.Appointment.save = function(appointment, service, uid) {};
+
+/**
+ * Removes an appointment
+ * @param {String} uid The uid of the appointment to be removed
+ * @param {String} [service] Optional parameter specifying which service this appointment is for. If not provided, the default device service is used.
+ * @returns {Object Literal}
+ * {
+ *   "data" : {
+ *     "uid" : "&lt;uid that was passed&gt;",
+ *     "service" : "&lt;service name that was passed&gt;"
+ *   }
+ * }
+ * @BB50+
+ * @uri
+ * @function
+ */
+blackberry.pim.Appointment.remove = function(uid, service) {};
 
 /**
 * Saves the changes made to the Appointment object. 
